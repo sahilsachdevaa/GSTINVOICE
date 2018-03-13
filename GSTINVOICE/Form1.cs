@@ -16,5 +16,15 @@ namespace GSTINVOICE
         {
             InitializeComponent();
         }
+
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addContracterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AddContracter() { MdiParent = this }.Show();
+        }
     }
 }
