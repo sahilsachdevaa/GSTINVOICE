@@ -50,6 +50,12 @@
     <Compile Include="AddContracter.Designer.cs">
       <DependentUpon>AddContracter.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIContainer.cs">
       <SubType>Form</SubType>
     </Compile>
