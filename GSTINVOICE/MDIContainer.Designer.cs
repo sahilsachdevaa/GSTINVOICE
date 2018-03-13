@@ -1,6 +1,6 @@
 ﻿namespace GSTINVOICE
 {
-    partial class Form1
+    partial class MDIContainer
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GSTINVOICE
 {
-    public partial class Form1 : Form
+    public partial class MDIContainer : Form
     {
-        public Form1()
+        public MDIContainer()
         {
             InitializeComponent();
         }
