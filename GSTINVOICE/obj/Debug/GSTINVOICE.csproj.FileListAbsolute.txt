@@ -13,3 +13,4 @@ E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csproj.CoreCompileInputs.ca
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddContracter.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCustomerFrm.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddProduct.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe.config
