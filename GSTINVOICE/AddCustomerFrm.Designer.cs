@@ -1,6 +1,6 @@
 ﻿namespace GSTINVOICE
 {
-    partial class AddContracter
+    partial class AddCustomerFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,124 +46,124 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(372, 361);
+            this.button1.Location = new System.Drawing.Point(380, 375);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 45);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Add Contractor";
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Add Customer";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(349, 56);
+            this.label8.Location = new System.Drawing.Point(357, 70);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 13);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Contractor Form";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Customer Form";
             // 
             // txtGSTIN
             // 
-            this.txtGSTIN.Location = new System.Drawing.Point(683, 263);
+            this.txtGSTIN.Location = new System.Drawing.Point(691, 277);
             this.txtGSTIN.Name = "txtGSTIN";
             this.txtGSTIN.Size = new System.Drawing.Size(100, 20);
-            this.txtGSTIN.TabIndex = 27;
+            this.txtGSTIN.TabIndex = 41;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(526, 263);
+            this.label6.Location = new System.Drawing.Point(534, 277);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 26;
+            this.label6.TabIndex = 40;
             this.label6.Text = "GSTIN";
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(683, 192);
+            this.txtMobile.Location = new System.Drawing.Point(691, 206);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(100, 20);
-            this.txtMobile.TabIndex = 25;
+            this.txtMobile.TabIndex = 39;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(526, 192);
+            this.label7.Location = new System.Drawing.Point(534, 206);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 24;
+            this.label7.TabIndex = 38;
             this.label7.Text = "Mobile No";
             // 
             // txtPinCode
             // 
-            this.txtPinCode.Location = new System.Drawing.Point(683, 124);
+            this.txtPinCode.Location = new System.Drawing.Point(691, 138);
             this.txtPinCode.Name = "txtPinCode";
             this.txtPinCode.Size = new System.Drawing.Size(100, 20);
-            this.txtPinCode.TabIndex = 23;
+            this.txtPinCode.TabIndex = 37;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(526, 124);
+            this.label4.Location = new System.Drawing.Point(534, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 22;
+            this.label4.TabIndex = 36;
             this.label4.Text = "PinCode";
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(263, 263);
+            this.txtCity.Location = new System.Drawing.Point(271, 277);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(100, 20);
-            this.txtCity.TabIndex = 21;
+            this.txtCity.TabIndex = 35;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 263);
+            this.label3.Location = new System.Drawing.Point(114, 277);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
-            this.label3.TabIndex = 20;
+            this.label3.TabIndex = 34;
             this.label3.Text = "City";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(263, 192);
+            this.txtAddress.Location = new System.Drawing.Point(271, 206);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtAddress.TabIndex = 19;
+            this.txtAddress.TabIndex = 33;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 192);
+            this.label2.Location = new System.Drawing.Point(114, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 18;
+            this.label2.TabIndex = 32;
             this.label2.Text = "Address";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(263, 124);
+            this.txtName.Location = new System.Drawing.Point(271, 138);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 17;
+            this.txtName.TabIndex = 31;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 124);
+            this.label1.Location = new System.Drawing.Point(114, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 16;
+            this.label1.TabIndex = 30;
             this.label1.Text = "Name";
             // 
-            // AddContracter
+            // AddCustomerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 470);
+            this.ClientSize = new System.Drawing.Size(904, 491);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtGSTIN);
@@ -179,8 +179,8 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddContracter";
-            this.Text = "AddContracter";
+            this.Name = "AddCustomerFrm";
+            this.Text = "AddCustomerFrm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();

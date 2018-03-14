@@ -3,8 +3,13 @@ E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe.config
 E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe
 E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.pdb
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csprojResolveAssemblyReference.cache
-E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.Form1.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.Properties.Resources.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csproj.GenerateResource.Cache
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.exe
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.pdb
+E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTInvoice.mdb
+E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.MDIContainer.resources
+E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csproj.CoreCompileInputs.cache
+E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddContracter.resources
+E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCustomerFrm.resources
+E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddProduct.resources

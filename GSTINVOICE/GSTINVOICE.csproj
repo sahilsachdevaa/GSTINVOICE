@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,12 +51,19 @@
     <Compile Include="AddContracter.Designer.cs">
       <DependentUpon>AddContracter.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomerFrm.Designer.cs">
+      <DependentUpon>AddCustomerFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperClass.cs" />
     <Compile Include="MDIContainer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddContracter.resx">
+      <DependentUpon>AddContracter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCustomerFrm.resx">
+      <DependentUpon>AddCustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIContainer.resx">
       <DependentUpon>MDIContainer.cs</DependentUpon>
     </EmbeddedResource>
