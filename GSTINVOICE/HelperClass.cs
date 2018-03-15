@@ -9,6 +9,11 @@ namespace GSTINVOICE
 {
     public static class HelperClass
     {
-        public static string ConString = ConfigurationManager.ConnectionStrings["ApplicationForm.Properties.Settings.CMSMDataNewConnectionString"].ConnectionString;
+      public static string ConString = ConfigurationManager.ConnectionStrings["ApplicationForm.Properties.Settings.CMSMDataNewConnectionString"].ConnectionString;
+    //     static HelperClass()
+    //    {
+
+    //    }
     }
+
 }

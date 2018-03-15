@@ -42,11 +42,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(372, 361);
+            this.button1.Location = new System.Drawing.Point(365, 392);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 45);
             this.button1.TabIndex = 29;
@@ -159,11 +163,47 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Name";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(683, 332);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 33;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(526, 332);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Password";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(263, 332);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(100, 20);
+            this.txtUserName.TabIndex = 31;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(106, 332);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 13);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "UserName";
+            // 
             // AddContracter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 470);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtGSTIN);
@@ -178,7 +218,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddContracter";
             this.Text = "AddContracter";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -203,5 +243,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Label label9;
     }
 }

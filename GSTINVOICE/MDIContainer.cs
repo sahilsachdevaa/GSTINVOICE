@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,20 +13,24 @@ namespace GSTINVOICE
 {
     public partial class MDIContainer : Form
     {
-        public static AddContracter FrmContracter = new AddContracter();
+  
+        public  AddCustomerFrm FrmCustomer = new AddCustomerFrm();
 
-        public static AddCustomerFrm FrmCustomer = new AddCustomerFrm();
-
-        public static AddProduct FrmProduct = new AddProduct();
+        public  AddProduct FrmProduct = new AddProduct();
+        public AddCategory FrmCategory= new AddCategory();
 
         public MDIContainer()
         {
             InitializeComponent();
-            FrmContracter.MdiParent = this;
+          //  this.menuStrip1.Visible = false;
+            
             FrmCustomer.MdiParent = this;
             FrmProduct.MdiParent = this;
+            FrmCategory.MdiParent = this;
         }
+        
 
+        
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
@@ -35,7 +40,7 @@ namespace GSTINVOICE
         private void addContracterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            FrmContracter.Show();
+         //   FrmContracter.Show();
         }
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +55,12 @@ namespace GSTINVOICE
             {
                 frm.Hide();
             }
+        }
+
+        private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllMDIForms();
+            FrmCategory.Show();
         }
     }
 }
