@@ -26,7 +26,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("insert into [tbl_Categories] (Name, Description,GST,CGST,SGST,IGST) values ('" + txtName.Text + "','" + txtDescription.Text + "','" + txtGST.Text + "','" + txtCGST.Text + "','" + txtSGST.Text + "','" + txtIGST.Text + "')", con);
+                    OleDbCommand cmd = new OleDbCommand("insert into [HSNCodetbl] (HSN/SAC, Items,GST%,CGST,SGST) values ('" + txtHSN.Text + "','" + txtItems.Text + "','" + txtGST.Text + "','" + txtCGST.Text + "','" + txtSGST.Text + "')", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -43,12 +43,11 @@ namespace GSTINVOICE
 
         private void ClearTextBoxes()
         {
-            txtName.Clear();
-            txtDescription.Clear();
+            txtHSN.Clear();
+            txtItems.Clear();
             txtGST.Clear();
             txtCGST.Clear();
             txtSGST.Clear();
-            txtIGST.Clear();
         }
     }
 }

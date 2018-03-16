@@ -27,7 +27,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("Select * from tbl_Contractor where UserName='" + txtUserName.Text + "' and pswd='" + txtPassword.Text + "'", con);
+                    OleDbCommand cmd = new OleDbCommand("Select * from Contractortbl where UserName='" + txtUserName.Text + "' and pswd='" + txtPassword.Text + "'", con);
                     con.Open();
                     OleDbDataAdapter adapt = new OleDbDataAdapter(cmd);
                     DataSet ds = new DataSet();
@@ -37,7 +37,8 @@ namespace GSTINVOICE
                     if (count == 1)
                     {
                         this.isloginsuccess = true;
-                        Application.Run(new MDIContainer());
+                       
+                       // Application.Run(new MDIContainer());
                     }
                         
                     else

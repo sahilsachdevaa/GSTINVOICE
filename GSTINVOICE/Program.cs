@@ -32,14 +32,14 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("Select * from tbl_Contractor", con);
+                    OleDbCommand cmd = new OleDbCommand("Select * from Contractortbl", con);
                     OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     if (dt.Rows.Count == 1)
                     {
                         
-                        var result = frmLogin.ShowDialog();
+                         frmLogin.ShowDialog();
                         
                     }
                     else

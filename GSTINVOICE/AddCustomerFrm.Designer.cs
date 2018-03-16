@@ -30,14 +30,10 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtGSTIN = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtMobile = new System.Windows.Forms.TextBox();
+            this.txtCustomerMobile = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPinCode = new System.Windows.Forms.TextBox();
+            this.txtCustomerGSTIN = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -57,79 +53,47 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(357, 70);
+            this.label8.Location = new System.Drawing.Point(414, 76);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 13);
             this.label8.TabIndex = 42;
             this.label8.Text = "Customer Form";
             // 
-            // txtGSTIN
+            // txtCustomerMobile
             // 
-            this.txtGSTIN.Location = new System.Drawing.Point(691, 277);
-            this.txtGSTIN.Name = "txtGSTIN";
-            this.txtGSTIN.Size = new System.Drawing.Size(100, 20);
-            this.txtGSTIN.TabIndex = 41;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(534, 277);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "GSTIN";
-            // 
-            // txtMobile
-            // 
-            this.txtMobile.Location = new System.Drawing.Point(691, 206);
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(100, 20);
-            this.txtMobile.TabIndex = 39;
+            this.txtCustomerMobile.Location = new System.Drawing.Point(691, 260);
+            this.txtCustomerMobile.Name = "txtCustomerMobile";
+            this.txtCustomerMobile.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerMobile.TabIndex = 39;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(534, 206);
+            this.label7.Location = new System.Drawing.Point(534, 260);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 38;
-            this.label7.Text = "Mobile No";
+            this.label7.Text = "Customer Mobile";
             // 
-            // txtPinCode
+            // txtCustomerGSTIN
             // 
-            this.txtPinCode.Location = new System.Drawing.Point(691, 138);
-            this.txtPinCode.Name = "txtPinCode";
-            this.txtPinCode.Size = new System.Drawing.Size(100, 20);
-            this.txtPinCode.TabIndex = 37;
+            this.txtCustomerGSTIN.Location = new System.Drawing.Point(691, 156);
+            this.txtCustomerGSTIN.Name = "txtCustomerGSTIN";
+            this.txtCustomerGSTIN.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerGSTIN.TabIndex = 37;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(534, 138);
+            this.label4.Location = new System.Drawing.Point(534, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 36;
-            this.label4.Text = "PinCode";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(271, 277);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(100, 20);
-            this.txtCity.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 277);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "City";
+            this.label4.Text = "CustomerGSTIN";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(271, 206);
+            this.txtAddress.Location = new System.Drawing.Point(271, 260);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
             this.txtAddress.TabIndex = 33;
@@ -137,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(114, 206);
+            this.label2.Location = new System.Drawing.Point(114, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 32;
@@ -145,7 +109,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(271, 138);
+            this.txtName.Location = new System.Drawing.Point(271, 156);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 31;
@@ -153,7 +117,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 138);
+            this.label1.Location = new System.Drawing.Point(114, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 30;
@@ -166,14 +130,10 @@
             this.ClientSize = new System.Drawing.Size(904, 491);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtGSTIN);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtMobile);
+            this.Controls.Add(this.txtCustomerMobile);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtPinCode);
+            this.Controls.Add(this.txtCustomerGSTIN);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
@@ -191,14 +151,10 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtGSTIN;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtMobile;
+        private System.Windows.Forms.TextBox txtCustomerMobile;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPinCode;
+        private System.Windows.Forms.TextBox txtCustomerGSTIN;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtName;

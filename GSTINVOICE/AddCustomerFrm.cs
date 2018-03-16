@@ -25,7 +25,7 @@ namespace GSTINVOICE
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
                     var txt = sender as TextBox;
-                    OleDbCommand cmd = new OleDbCommand("insert into [tbl_CustomerDetail] (Name, Address,City,PinCode,Mobile,GSTIN) values ('" + txtName.Text + "' , '" + txtAddress.Text + "' , '" + txtCity.Text + "', '" + txtPinCode.Text + "', '" + txtMobile.Text + "', '" + txtGSTIN.Text + "')", con);
+                    OleDbCommand cmd = new OleDbCommand("insert into [Customertbl] (CustomerName, Address,CustomerGSTIN,CustomerMobile) values ('" + txtName.Text + "' , '" + txtAddress.Text + "' , '" + txtCustomerGSTIN.Text + "', '" + txtCustomerMobile.Text + "')", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -44,10 +44,8 @@ namespace GSTINVOICE
         {
             txtName.Clear();
             txtAddress.Clear();
-            txtCity.Clear();
-            txtGSTIN.Clear();
-            txtMobile.Clear();
-            txtPinCode.Clear();
+            txtCustomerMobile.Clear();
+            txtCustomerGSTIN.Clear();
         }
     }
 }

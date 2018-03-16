@@ -28,7 +28,7 @@ namespace GSTINVOICE
                 using (var con = new OleDbConnection(ConString))
                 {
                     var txt = sender as TextBox;
-                    OleDbCommand cmd = new OleDbCommand("insert into [tbl_Contractor] (Name, Address,City,PinCode,Mobile,GSTIN,UserName,Pswd) values ('" + txtName.Text + "','" + txtAddress.Text + "','" + txtCity.Text + "','" + txtPinCode.Text + "','" + txtMobile.Text + "','" + txtGSTIN.Text + "','" + txtUserName.Text + "','"+txtPassword.Text+"')", con);
+                    OleDbCommand cmd = new OleDbCommand("insert into [Contractortbl] (ContractorName, Address,GSTIN,Mobile,EmailID,UserName,Pswd) values ('" + txtContractorName.Text + "','" + txtAddress.Text + "','" + txtGSTIN.Text + "','" + txtMobile.Text + "','" + txtEmailID.Text + "','" + txtUserName.Text + "','" + txtPassword.Text + "')", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -46,12 +46,11 @@ namespace GSTINVOICE
 
         private void ClearTextBoxes()
         {
-            txtName.Clear();
+            txtContractorName.Clear();
             txtAddress.Clear();
-            txtCity.Clear();
             txtGSTIN.Clear();
+            txtEmailID.Clear();
             txtMobile.Clear();
-            txtPinCode.Clear();
             txtPassword.Clear();
             txtUserName.Clear();
         }
