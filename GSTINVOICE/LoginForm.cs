@@ -14,10 +14,13 @@ namespace GSTINVOICE
 {
     public partial class LoginForm : Form
     {
+        MDIContainer container;
         bool isloginsuccess = false;
         string ConString = ConfigurationManager.ConnectionStrings["ApplicationForm.Properties.Settings.CMSMDataNewConnectionString"].ConnectionString;
-        public LoginForm()
+        public LoginForm(MDIContainer mDIContainer)
         {
+            container = mDIContainer;
+            this.MdiParent = container;
             InitializeComponent();
         }
 
@@ -37,7 +40,8 @@ namespace GSTINVOICE
                     if (count == 1)
                     {
                         this.isloginsuccess = true;
-                        Application.Run(new MDIContainer());
+                        this.Hide();
+                        this.container.EnableControls();
                     }
                         
                     else

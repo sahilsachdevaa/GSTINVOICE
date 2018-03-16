@@ -14,10 +14,12 @@ namespace GSTINVOICE
 {
     public partial class AddContracter : Form
     {
-        bool iseditmode = false;
+        MDIContainer parent;
         string ConString = ConfigurationManager.ConnectionStrings["ApplicationForm.Properties.Settings.CMSMDataNewConnectionString"].ConnectionString;
-        public AddContracter()
+        public AddContracter(MDIContainer mDIContainer)
         {
+            this.parent = mDIContainer;
+            this.MdiParent = this.parent;
             InitializeComponent();
         }
 
@@ -33,7 +35,7 @@ namespace GSTINVOICE
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Contrator Saved Successfully..!!");
-                    new LoginForm().ShowDialog();
+                    parent.frmLogin.Show();
                     this.Close();
                 }
             }
