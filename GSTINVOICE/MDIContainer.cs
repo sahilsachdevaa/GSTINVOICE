@@ -13,17 +13,19 @@ namespace GSTINVOICE
 {
     public partial class MDIContainer : Form
     {
-  
-        public  AddCustomerFrm FrmCustomer = new AddCustomerFrm();
-
-        public  AddProduct FrmProduct = new AddProduct();
+        public LoginForm frmLogin { get; set; }
+        public AddContracter FrmContracter { get; set; }
+        public AddCustomerFrm FrmCustomer = new AddCustomerFrm();
+        public AddProduct FrmProduct = new AddProduct();
         public AddCategory FrmCategory= new AddCategory();
 
         public MDIContainer()
         {
             InitializeComponent();
-          //  this.menuStrip1.Visible = false;
-            
+            this.menuStrip1.Visible = false;
+            frmLogin = new LoginForm(this);
+            FrmContracter = new AddContracter(this);
+            CheckContractor();
             FrmCustomer.MdiParent = this;
             FrmProduct.MdiParent = this;
             FrmCategory.MdiParent = this;
@@ -62,5 +64,40 @@ namespace GSTINVOICE
             HideAllMDIForms();
             FrmCategory.Show();
         }
+        public void CheckContractor()
+        {
+            try
+            {
+                using (var con = new OleDbConnection(HelperClass.ConString))
+                {
+                    OleDbCommand cmd = new OleDbCommand("Select * from tbl_Contractor", con);
+                    OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 1)
+                    {
+
+                        frmLogin.Show();
+                    }
+                    else
+                    {
+                        FrmContracter.Show();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public void EnableControls()
+        {
+            this.menuStrip1.Visible = true;
+        }
+
     }
+
 }

@@ -10,9 +10,6 @@ namespace GSTINVOICE
 {
     static class Program
     {
-        public static LoginForm frmLogin;
-        public static AddContracter FrmContracter;
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,6 +18,7 @@ namespace GSTINVOICE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
+<<<<<<< HEAD
             frmLogin = new LoginForm();
             FrmContracter = new AddContracter();
             CheckContractor();
@@ -53,6 +51,10 @@ namespace GSTINVOICE
 
                 throw;
             }
+=======
+            Application.Run(new MDIContainer());
+>>>>>>> f4f726cd1dee03bcb26b1b08d6cd6729f209d5f4
         }
+      
     }
 }
