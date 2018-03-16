@@ -17,6 +17,7 @@ namespace GSTINVOICE
         MDIContainer container;
         bool isloginsuccess = false;
         string ConString = ConfigurationManager.ConnectionStrings["ApplicationForm.Properties.Settings.CMSMDataNewConnectionString"].ConnectionString;
+        public LoginForm(MDIContainer mDIContainer)
         {
             container = mDIContainer;
             this.MdiParent = container;
@@ -42,6 +43,7 @@ namespace GSTINVOICE
 <<<<<<< HEAD
                        
                        // Application.Run(new MDIContainer());
+=======
                         this.Hide();
                         this.container.EnableControls();
 >>>>>>> f4f726cd1dee03bcb26b1b08d6cd6729f209d5f4
