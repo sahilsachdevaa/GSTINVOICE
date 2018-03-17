@@ -50,7 +50,7 @@
             this.btnAddCategory.TabIndex = 57;
             this.btnAddCategory.Text = "Add Category";
             this.btnAddCategory.UseVisualStyleBackColor = true;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            this.btnAddCategory.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
             // 
@@ -161,7 +161,6 @@
             this.Name = "AddCategory";
             this.Text = "AddCategory";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.AddCategory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
