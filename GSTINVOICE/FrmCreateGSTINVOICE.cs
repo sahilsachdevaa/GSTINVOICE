@@ -25,7 +25,7 @@ namespace GSTINVOICE
             }
             else
             {
-                this.label1.Text = "Bill Of Supply"; 
+                this.label1.Text = "Bill Of Supply";
             }
         }
 
@@ -59,8 +59,8 @@ namespace GSTINVOICE
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-      //      string value = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-      
+            //      string value = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
             int column = dataGridView1.CurrentCell.ColumnIndex;
 
             if (column == 0)
@@ -87,7 +87,7 @@ namespace GSTINVOICE
 
             try
             {
-                if (column == 3  || column == 2)
+                if (column == 3 || column == 2)
                 {
                     var qty = dataGridView1.CurrentRow.Cells[2].Value;
                     var amount = dataGridView1.CurrentRow.Cells[3].Value;
@@ -136,7 +136,7 @@ namespace GSTINVOICE
         private void UpdateGridOnCategorySelection()
         {
             OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
-            OleDbDataAdapter da = new OleDbDataAdapter("Select * from Hsncodetbl where id =" +  this.CatID, conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select * from Hsncodetbl where id =" + this.CatID, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.CurrentRow.Cells[1].Value = dt.Rows[0][2];
@@ -151,7 +151,7 @@ namespace GSTINVOICE
         {
 
 
-            
+
         }
 
         private void FrmCreateGSTINVOICE_Load(object sender, EventArgs e)
@@ -193,7 +193,7 @@ namespace GSTINVOICE
             {
                 str = "00" + str;
             }
-            return "IN"+ str;
+            return "IN" + str;
         }
 
         private string genrateInvoiceCode()
@@ -204,19 +204,34 @@ namespace GSTINVOICE
         public AutoCompleteStringCollection AutoCompleteLoad()
 
         {
-
+            OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select CustomerName from Customertbl ", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
             AutoCompleteStringCollection str = new AutoCompleteStringCollection();
 
+            for (int i = 0; i < dt.Rows.Count; i++)
 
-
-            for (int i = 0; i <= 5; i++)
-
-                str.Add("Name " + i.ToString());
-
-
+                str.Add(dt.Rows[i][0].ToString());
 
             return str;
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
+            var getHSNValue = dataGridView1.CurrentRow.Cells[1].Value;
+            var getQuantity = dataGridView1.CurrentRow.Cells[2].Value;
+            var getRate = dataGridView1.CurrentRow.Cells[3].Value;
+            var getSGST = dataGridView1.CurrentRow.Cells[9].Value;
+            var getCGST = dataGridView1.CurrentRow.Cells[7].Value;
+            double getGrandTotal = Convert.ToDouble(txtgrandtotal.Text);
+            OleDbCommand cmd = new OleDbCommand("insert into [Invoicetbl] (InvoiceNo, HSN/Sac,Quantity,Rate,SGST%,CGST%,GrandTotal) values ('" + txtInvoice.Text + "','" + getHSNValue.ToString() + "','" + getQuantity.ToString() + "','" + getRate.ToString() + "','" + getSGST.ToString() + "','" + getCGST.ToString() + "','"+txtgrandtotal.Text+"')", conn);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Customer Saved Successfully..!!");
         }
     }
 }

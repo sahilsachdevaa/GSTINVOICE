@@ -41,7 +41,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtItems = new System.Windows.Forms.TextBox();
             this.txtGST = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,17 +60,17 @@
             this.groupBox1.Controls.Add(this.txtGST);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(172, 107);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(973, 420);
             this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Category Detail";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtCGST
             // 
             this.txtCGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCGST.Location = new System.Drawing.Point(391, 256);
+            this.txtCGST.Location = new System.Drawing.Point(389, 336);
             this.txtCGST.Multiline = true;
             this.txtCGST.Name = "txtCGST";
             this.txtCGST.Size = new System.Drawing.Size(263, 25);
@@ -83,7 +82,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label5.Location = new System.Drawing.Point(253, 255);
+            this.label5.Location = new System.Drawing.Point(251, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 24);
             this.label5.TabIndex = 15;
@@ -95,7 +94,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label6.Location = new System.Drawing.Point(250, 302);
+            this.label6.Location = new System.Drawing.Point(248, 382);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 25);
             this.label6.TabIndex = 17;
@@ -104,7 +103,7 @@
             // txtSGST
             // 
             this.txtSGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSGST.Location = new System.Drawing.Point(389, 304);
+            this.txtSGST.Location = new System.Drawing.Point(387, 384);
             this.txtSGST.Multiline = true;
             this.txtSGST.Name = "txtSGST";
             this.txtSGST.Size = new System.Drawing.Size(263, 25);
@@ -113,7 +112,7 @@
             // txtHSN
             // 
             this.txtHSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHSN.Location = new System.Drawing.Point(392, 156);
+            this.txtHSN.Location = new System.Drawing.Point(389, 253);
             this.txtHSN.Multiline = true;
             this.txtHSN.Name = "txtHSN";
             this.txtHSN.Size = new System.Drawing.Size(263, 25);
@@ -125,7 +124,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label9.Location = new System.Drawing.Point(251, 156);
+            this.label9.Location = new System.Drawing.Point(248, 253);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 24);
             this.label9.TabIndex = 2;
@@ -136,7 +135,7 @@
             this.btnClear.BackColor = System.Drawing.Color.DimGray;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnClear.Location = new System.Drawing.Point(467, 355);
+            this.btnClear.Location = new System.Drawing.Point(479, 464);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(213, 44);
             this.btnClear.TabIndex = 9;
@@ -149,7 +148,7 @@
             this.btnAddCategory.BackColor = System.Drawing.Color.DimGray;
             this.btnAddCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCategory.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnAddCategory.Location = new System.Drawing.Point(216, 355);
+            this.btnAddCategory.Location = new System.Drawing.Point(228, 464);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(213, 44);
             this.btnAddCategory.TabIndex = 8;
@@ -165,9 +164,9 @@
             this.label11.ForeColor = System.Drawing.Color.GhostWhite;
             this.label11.Location = new System.Drawing.Point(251, 84);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 25);
+            this.label11.Size = new System.Drawing.Size(64, 25);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Items";
+            this.label11.Text = "Name";
             // 
             // label12
             // 
@@ -175,7 +174,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label12.Location = new System.Drawing.Point(252, 202);
+            this.label12.Location = new System.Drawing.Point(250, 294);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(72, 25);
             this.label12.TabIndex = 4;
@@ -184,31 +183,46 @@
             // txtItems
             // 
             this.txtItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItems.Location = new System.Drawing.Point(390, 58);
+            this.txtItems.Location = new System.Drawing.Point(389, 70);
             this.txtItems.Multiline = true;
             this.txtItems.Name = "txtItems";
+<<<<<<< HEAD
             this.txtItems.Size = new System.Drawing.Size(263, 82);
             this.txtItems.TabIndex = 1;
+=======
+            this.txtItems.Size = new System.Drawing.Size(263, 51);
+            this.txtItems.TabIndex = 2;
+>>>>>>> 7b40d35f63af9e58bc1aee399b79ad67694a95cd
             // 
             // txtGST
             // 
             this.txtGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGST.Location = new System.Drawing.Point(391, 204);
+            this.txtGST.Location = new System.Drawing.Point(389, 296);
             this.txtGST.Multiline = true;
             this.txtGST.Name = "txtGST";
             this.txtGST.Size = new System.Drawing.Size(263, 25);
             this.txtGST.TabIndex = 3;
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label3.Location = new System.Drawing.Point(22, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(528, 55);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Add New Category Record";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label1.Location = new System.Drawing.Point(250, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 25);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Description";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(389, 148);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(263, 82);
+            this.txtDescription.TabIndex = 18;
             // 
             // AddCategory
             // 
@@ -216,7 +230,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1253, 568);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddCategory";
             this.Text = "AddCategory";
@@ -224,7 +237,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -243,6 +255,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtItems;
         private System.Windows.Forms.TextBox txtGST;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDescription;
     }
 }
