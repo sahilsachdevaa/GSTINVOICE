@@ -29,7 +29,7 @@ namespace GSTINVOICE
             txtSGST.Clear();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAddCategory_Click(object sender, EventArgs e)
         {
             try
             {
@@ -48,6 +48,12 @@ namespace GSTINVOICE
 
                 throw ex;
             }
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxes();
         }
     }
 }
