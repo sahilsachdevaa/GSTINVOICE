@@ -41,11 +41,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtItems = new System.Windows.Forms.TextBox();
             this.txtGST = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtDescription);
             this.groupBox1.Controls.Add(this.txtCGST);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
@@ -60,8 +64,9 @@
             this.groupBox1.Controls.Add(this.txtGST);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(92, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(973, 420);
+            this.groupBox1.Size = new System.Drawing.Size(1115, 545);
             this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Category Detail";
@@ -186,13 +191,10 @@
             this.txtItems.Location = new System.Drawing.Point(389, 70);
             this.txtItems.Multiline = true;
             this.txtItems.Name = "txtItems";
-<<<<<<< HEAD
             this.txtItems.Size = new System.Drawing.Size(263, 82);
             this.txtItems.TabIndex = 1;
-=======
             this.txtItems.Size = new System.Drawing.Size(263, 51);
             this.txtItems.TabIndex = 2;
->>>>>>> 7b40d35f63af9e58bc1aee399b79ad67694a95cd
             // 
             // txtGST
             // 
