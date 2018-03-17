@@ -39,7 +39,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtCustomerGSTIN = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,33 +173,21 @@
             this.txtCustomerGSTIN.Size = new System.Drawing.Size(263, 27);
             this.txtCustomerGSTIN.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(12, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(539, 55);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Add New Customer Record";
-            // 
             // AddCustomerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1265, 571);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCustomerFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddCustomerFrm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -217,6 +204,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtCustomerGSTIN;
-        private System.Windows.Forms.Label label1;
     }
 }

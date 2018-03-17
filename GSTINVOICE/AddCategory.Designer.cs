@@ -41,7 +41,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtItems = new System.Windows.Forms.TextBox();
             this.txtGST = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -199,32 +198,20 @@
             this.txtGST.Size = new System.Drawing.Size(263, 25);
             this.txtGST.TabIndex = 3;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label3.Location = new System.Drawing.Point(22, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(528, 55);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Add New Category Record";
-            // 
             // AddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1253, 568);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddCategory";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -243,6 +230,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtItems;
         private System.Windows.Forms.TextBox txtGST;
-        private System.Windows.Forms.Label label3;
     }
 }
