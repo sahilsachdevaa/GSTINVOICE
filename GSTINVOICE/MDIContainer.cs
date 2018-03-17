@@ -73,7 +73,7 @@ namespace GSTINVOICE
                     }
                     else
                     {
-                        FrmContracter.Show();
+                                FrmContracter.Show();
                     }
                 }
             }

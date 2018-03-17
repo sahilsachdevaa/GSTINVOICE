@@ -20,7 +20,16 @@ namespace GSTINVOICE
             InitializeComponent();
         }
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
+        private void ClearTextBoxes()
+        {
+            txtHSN.Clear();
+            txtItems.Clear();
+            txtGST.Clear();
+            txtCGST.Clear();
+            txtSGST.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -39,20 +48,6 @@ namespace GSTINVOICE
 
                 throw ex;
             }
-        }
-
-        private void ClearTextBoxes()
-        {
-            txtHSN.Clear();
-            txtItems.Clear();
-            txtGST.Clear();
-            txtCGST.Clear();
-            txtSGST.Clear();
-        }
-
-        private void AddCategory_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
