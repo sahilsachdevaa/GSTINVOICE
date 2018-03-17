@@ -41,7 +41,7 @@ namespace GSTINVOICE
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            new AddProduct(){ MdiParent = this }.Show();
+           
         }
 
         public void HideAllMDIForms()
