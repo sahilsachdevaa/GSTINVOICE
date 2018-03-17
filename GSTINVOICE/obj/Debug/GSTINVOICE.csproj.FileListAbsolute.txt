@@ -33,3 +33,4 @@ E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCategory.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCategory.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.LoginForm.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCreateGSTINVOICE.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCreateGSTINVOICE.resources
