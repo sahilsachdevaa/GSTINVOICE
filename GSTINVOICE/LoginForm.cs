@@ -24,7 +24,14 @@ namespace GSTINVOICE
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+    
+        public  bool CustomDialog()
+        {
+            this.Show();
+            return this.isloginsuccess;
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -40,15 +47,14 @@ namespace GSTINVOICE
                     if (count == 1)
                     {
                         this.isloginsuccess = true;
-<<<<<<< HEAD
-                       
-                       // Application.Run(new MDIContainer());
-=======
+
+
+                        // Application.Run(new MDIContainer());
+
                         this.Hide();
                         this.container.EnableControls();
->>>>>>> f4f726cd1dee03bcb26b1b08d6cd6729f209d5f4
                     }
-                        
+
                     else
                     {
                         MessageBox.Show("Login Failed!");
@@ -60,13 +66,6 @@ namespace GSTINVOICE
 
                 throw ex;
             }
-
-        }
-
-        public  bool CustomDialog()
-        {
-            this.Show();
-            return this.isloginsuccess;
         }
     }
 }

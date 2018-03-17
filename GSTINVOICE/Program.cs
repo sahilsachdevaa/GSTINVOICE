@@ -18,42 +18,7 @@ namespace GSTINVOICE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-<<<<<<< HEAD
-            frmLogin = new LoginForm();
-            FrmContracter = new AddContracter();
-            CheckContractor();
-           // Application.Run(new MDIContainer());
-        }
-        public static void CheckContractor()
-        {
-            try
-            {
-                using (var con = new OleDbConnection(HelperClass.ConString))
-                {
-                    OleDbCommand cmd = new OleDbCommand("Select * from Contractortbl", con);
-                    OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    if (dt.Rows.Count == 1)
-                    {
-                        
-                         frmLogin.ShowDialog();
-                        
-                    }
-                    else
-                    {
-                        FrmContracter.ShowDialog();
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-=======
             Application.Run(new MDIContainer());
->>>>>>> f4f726cd1dee03bcb26b1b08d6cd6729f209d5f4
         }
       
     }

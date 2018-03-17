@@ -70,7 +70,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("Select * from tbl_Contractor", con);
+                    OleDbCommand cmd = new OleDbCommand("Select * from Contractortbl", con);
                     OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -81,7 +81,7 @@ namespace GSTINVOICE
                     }
                     else
                     {
-                        FrmContracter.Show();
+                                FrmContracter.Show();
                     }
                 }
             }

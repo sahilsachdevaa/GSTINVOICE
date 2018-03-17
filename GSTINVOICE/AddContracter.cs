@@ -23,14 +23,25 @@ namespace GSTINVOICE
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ClearTextBoxes()
+        {
+            txtContractorName.Clear();
+            txtAddress.Clear();
+            textBox3.Clear();
+            txtEmailID.Clear();
+            txtMobile.Clear();
+            txtPassword.Clear();
+            txtUserName.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             try
             {
                 using (var con = new OleDbConnection(ConString))
                 {
                     var txt = sender as TextBox;
-                    OleDbCommand cmd = new OleDbCommand("insert into [Contractortbl] (ContractorName, Address,GSTIN,Mobile,EmailID,UserName,Pswd) values ('" + txtContractorName.Text + "','" + txtAddress.Text + "','" + txtGSTIN.Text + "','" + txtMobile.Text + "','" + txtEmailID.Text + "','" + txtUserName.Text + "','" + txtPassword.Text + "')", con);
+                    OleDbCommand cmd = new OleDbCommand("insert into [Contractortbl] (ContractorName, Address,GSTIN,Mobile,EmailID,UserName,Pswd) values ('" + txtContractorName.Text + "','" + txtAddress.Text + "','" + textBox3.Text + "','" + txtMobile.Text + "','" + txtEmailID.Text + "','" + txtUserName.Text + "','" + txtPassword.Text + "')", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -46,15 +57,14 @@ namespace GSTINVOICE
             }
         }
 
-        private void ClearTextBoxes()
+        private void button1_Click(object sender, EventArgs e)
         {
-            txtContractorName.Clear();
-            txtAddress.Clear();
-            txtGSTIN.Clear();
-            txtEmailID.Clear();
-            txtMobile.Clear();
-            txtPassword.Clear();
-            txtUserName.Clear();
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxes();
         }
     }
 }

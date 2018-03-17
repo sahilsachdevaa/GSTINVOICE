@@ -18,10 +18,19 @@ namespace GSTINVOICE
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+   
+        private void ClearTextBoxes()
+        {
+            txtName.Clear();
+            txtAddress.Clear();
+            txtCustomerGSTIN.Clear();
+        }
+
+        
+        private void button4_Click_1(object sender, EventArgs e)
         {
             try
-            {
+                {
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
                     var txt = sender as TextBox;
@@ -40,12 +49,14 @@ namespace GSTINVOICE
             }
         }
 
-        private void ClearTextBoxes()
+        private void button3_Click_1(object sender, EventArgs e)
         {
-            txtName.Clear();
-            txtAddress.Clear();
-            txtCustomerMobile.Clear();
-            txtCustomerGSTIN.Clear();
+            ClearTextBoxes();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
