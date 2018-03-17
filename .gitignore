@@ -5,3 +5,7 @@
 /.vs/GSTINVOICE/v15/Server/sqlite3
 /GSTINVOICE/bin/Debug
 GSTINVOICE/LoginForm.cs
+*.suo
+*.Cache
+*.exe
+*.pdb
