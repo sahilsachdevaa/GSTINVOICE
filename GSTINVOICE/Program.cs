@@ -18,7 +18,7 @@ namespace GSTINVOICE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new MDIContainer());
+            Application.Run(new FrmCreateGSTINVOICE(true));
         }
     }
 }
