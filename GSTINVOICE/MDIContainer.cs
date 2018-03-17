@@ -15,10 +15,6 @@ namespace GSTINVOICE
     {
         public LoginForm frmLogin { get; set; }
         public AddContracter FrmContracter { get; set; }
-        public AddCustomerFrm FrmCustomer = new AddCustomerFrm();
-        public AddProduct FrmProduct = new AddProduct();
-        public AddCategory FrmCategory= new AddCategory();
-
         public MDIContainer()
         {
             InitializeComponent();
@@ -26,9 +22,6 @@ namespace GSTINVOICE
             frmLogin = new LoginForm(this);
             FrmContracter = new AddContracter(this);
             CheckContractor();
-            FrmCustomer.MdiParent = this;
-            FrmProduct.MdiParent = this;
-            FrmCategory.MdiParent = this;
         }
         
 
@@ -36,33 +29,33 @@ namespace GSTINVOICE
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            FrmCustomer.Show();
+            new AddCustomerFrm() { MdiParent = this }.Show();
         }
 
         private void addContracterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            new FrmCreateGSTINVOICE() { MdiParent = this }.Show();
+            new FrmCreateGSTINVOICE(true) { MdiParent = this }.Show();
         }
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            FrmProduct.Show();
+            new AddProduct(){ MdiParent = this }.Show();
         }
 
         public void HideAllMDIForms()
         {
             foreach (Form frm in this.MdiChildren)
             {
-                frm.Hide();
+                frm.Close();
             }
         }
 
         private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            FrmCategory.Show();
+            new AddCategory() { MdiParent = this}.Show();
         }
         public void CheckContractor()
         {
@@ -86,7 +79,6 @@ namespace GSTINVOICE
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -97,6 +89,11 @@ namespace GSTINVOICE
             this.menuStrip1.Visible = true;
         }
 
+        private void billInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllMDIForms();
+            new FrmCreateGSTINVOICE(false) { MdiParent = this }.Show();
+        }
     }
 
 }

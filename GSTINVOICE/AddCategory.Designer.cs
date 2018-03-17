@@ -161,6 +161,7 @@
             this.Name = "AddCategory";
             this.Text = "AddCategory";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.AddCategory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

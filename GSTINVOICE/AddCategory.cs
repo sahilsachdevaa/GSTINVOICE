@@ -49,5 +49,10 @@ namespace GSTINVOICE
             txtCGST.Clear();
             txtSGST.Clear();
         }
+
+        private void AddCategory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
