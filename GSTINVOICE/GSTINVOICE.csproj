@@ -75,6 +75,18 @@
     <Compile Include="FrmCategory.Designer.cs">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCreateBillOfSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateBillOfSupply.Designer.cs">
+      <DependentUpon>FrmCreateBillOfSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateGSTINVOICE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateGSTINVOICE.Designer.cs">
+      <DependentUpon>FrmCreateGSTINVOICE.cs</DependentUpon>
+    </Compile>
     <Compile Include="GSTInvoiceDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateGSTINVOICE.resx">
+      <DependentUpon>FrmCreateGSTINVOICE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

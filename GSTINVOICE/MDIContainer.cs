@@ -42,7 +42,7 @@ namespace GSTINVOICE
         private void addContracterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-         //   FrmContracter.Show();
+            new FrmCreateGSTINVOICE() { MdiParent = this }.Show();
         }
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
