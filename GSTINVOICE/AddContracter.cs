@@ -66,5 +66,10 @@ namespace GSTINVOICE
         {
             ClearTextBoxes();
         }
+
+        private void AddContracter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

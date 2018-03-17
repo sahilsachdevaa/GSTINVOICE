@@ -9,3 +9,4 @@ GSTINVOICE/LoginForm.cs
 *.Cache
 *.exe
 *.pdb
+GSTINVOICE/obj/Debug/GSTINVOICE.csproj.GenerateResource.Cache
