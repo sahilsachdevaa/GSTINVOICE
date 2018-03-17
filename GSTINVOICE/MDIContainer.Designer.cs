@@ -91,8 +91,9 @@
             // billInvoiceToolStripMenuItem
             // 
             this.billInvoiceToolStripMenuItem.Name = "billInvoiceToolStripMenuItem";
-            this.billInvoiceToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.billInvoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.billInvoiceToolStripMenuItem.Text = "Bill Invoice";
+            this.billInvoiceToolStripMenuItem.Click += new System.EventHandler(this.billInvoiceToolStripMenuItem_Click);
             // 
             // MDIContainer
             // 

@@ -12,9 +12,19 @@ namespace GSTINVOICE
 {
     public partial class FrmCreateGSTINVOICE : Form
     {
-        public FrmCreateGSTINVOICE()
+        bool isGstForm = true;
+        public FrmCreateGSTINVOICE(bool v)
         {
+            isGstForm = v;
             InitializeComponent();
+            if (isGstForm)
+            {
+                this.label1.Text = "GST Invoice";
+            }
+            else
+            {
+                this.label1.Text = "Bill Of Supply"; 
+            }
         }
 
         private void txtCustomer_TextChanged(object sender, EventArgs e)
