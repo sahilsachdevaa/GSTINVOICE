@@ -47,10 +47,13 @@ namespace GSTINVOICE
                     if (count == 1)
                     {
                         this.isloginsuccess = true;
+<<<<<<< HEAD
 
 
                         // Application.Run(new MDIContainer());
 
+=======
+>>>>>>> 67f327f8e5a88c4f1f2f5c601d56419f05787891
                         this.Hide();
                         this.container.EnableControls();
                     }
