@@ -35,7 +35,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("insert into [HSNCodetbl] (HSN/SAC, Items,GST%,CGST,SGST) values ('" + txtHSN.Text + "','" + txtItems.Text + "','" + txtGST.Text + "','" + txtCGST.Text + "','" + txtSGST.Text + "')", con);
+                    OleDbCommand cmd = new OleDbCommand("insert into [HSNCodetbl] (HSN_SAC, Items,GST,CGST,SGST) values ('" + txtHSN.Text + "','" + txtItems.Text + "'," + txtGST.Text + "," + txtCGST.Text + "," + txtSGST.Text + ")", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();

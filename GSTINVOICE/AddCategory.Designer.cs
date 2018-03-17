@@ -117,7 +117,7 @@
             this.txtHSN.Multiline = true;
             this.txtHSN.Name = "txtHSN";
             this.txtHSN.Size = new System.Drawing.Size(263, 25);
-            this.txtHSN.TabIndex = 1;
+            this.txtHSN.TabIndex = 2;
             // 
             // label9
             // 
@@ -188,7 +188,7 @@
             this.txtItems.Multiline = true;
             this.txtItems.Name = "txtItems";
             this.txtItems.Size = new System.Drawing.Size(263, 82);
-            this.txtItems.TabIndex = 2;
+            this.txtItems.TabIndex = 1;
             // 
             // txtGST
             // 
