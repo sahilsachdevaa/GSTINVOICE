@@ -23,6 +23,7 @@ namespace GSTINVOICE
         {
             txtName.Clear();
             txtAddress.Clear();
+            txtCustomerMobile.Clear();
             txtCustomerGSTIN.Clear();
         }
 
