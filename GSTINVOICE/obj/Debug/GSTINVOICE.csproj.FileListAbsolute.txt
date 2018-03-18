@@ -1,4 +1,24 @@
 c:\users\sahil sachdeva\documents\visual studio 2012\Projects\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe.config
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe.config
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.pdb
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csprojResolveAssemblyReference.cache
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddContracter.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCustomerFrm.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddProduct.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCategory.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.MDIContainer.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.Properties.Resources.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csproj.GenerateResource.Cache
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.exe
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.pdb
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.LoginForm.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCategory.resources
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTInvoice.mdb
+C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCreateGSTINVOICE.resources
+E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe.config
+E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe
+E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.pdb
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCategory.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddContracter.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCustomerFrm.resources
@@ -7,31 +27,9 @@ E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCreateGSTINVOICE.resourc
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.LoginForm.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.MDIContainer.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.Properties.Resources.resources
+E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.SelectCategory.resources
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csproj.GenerateResource.Cache
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csproj.CoreCompileInputs.cache
-E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe.config
-E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe
-E:\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.pdb
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.exe
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.pdb
 E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTInvoice.mdb
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe.config
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.exe
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\bin\Debug\GSTINVOICE.pdb
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCategory.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddContracter.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddCustomerFrm.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.AddProduct.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCategory.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.FrmCreateGSTINVOICE.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.LoginForm.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.MDIContainer.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.Properties.Resources.resources
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.csproj.GenerateResource.Cache
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.exe
-C:\Users\deepak\Documents\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.pdb
-=======
-E:\GitHub\GSTINVOICE\GSTINVOICE\obj\Debug\GSTINVOICE.SelectCategory.resources
->>>>>>> 5cc5d480945aea557a76838fd1cc556b585ee978

@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 
 namespace GSTINVOICE
 {
@@ -27,6 +27,7 @@ namespace GSTINVOICE
             txtGST.Clear();
             txtCGST.Clear();
             txtSGST.Clear();
+            txtDescription.Clear();
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("insert into [HSNCodetbl] (Category,[HSN/SAC],Description,GST%,CGST,SGST) values ('" + txtItems.Text + "','" + txtHSN.Text + "','" + txtDescription.Text + "'," + txtGST.Text + "," + txtCGST.Text + "," + txtSGST.Text + ")", con);
+                    OleDbCommand cmd = new OleDbCommand("insert into [HSNCodetbl] (Category,HSN_SAC,Description,GST,CGST,SGST) values ('" + txtItems.Text  + "','"+ txtHSN.Text + "','" + txtDescription.Text + "'," + txtGST.Text + "," + txtCGST.Text + "," + txtSGST.Text + ")", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();

@@ -43,7 +43,19 @@ namespace GSTINVOICE
                     DataSet ds = new DataSet();
                     adapt.Fill(ds);
                     con.Close();
+                    if (txtUserName.Text == "")
+                    {
+                        MessageBox.Show("Please Enter User Name");
+                        return;
+                    }
+                    else if(txtPassword.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Password");
+                        return;
+                    }
+                    
                     int count = ds.Tables[0].Rows.Count;
+                    
                     if (count == 1)
                     {
                         this.isloginsuccess = true;
@@ -62,6 +74,11 @@ namespace GSTINVOICE
 
                 throw ex;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

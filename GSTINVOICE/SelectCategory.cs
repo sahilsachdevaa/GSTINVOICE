@@ -22,9 +22,9 @@ namespace GSTINVOICE
 
         private void SelectCategory_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gSTDataSet1.HSNCodetbl' table. You can move, or remove it, as needed.
-            this.hSNCodetblTableAdapter.Fill(this.gSTDataSet1.HSNCodetbl);
-            this.comboBox1.SelectedIndex = 1;
+            // TODO: This line of code loads data into the 'gSTDataSet2.HSNCodetbl' table. You can move, or remove it, as needed.
+            this.hSNCodetblTableAdapter.Fill(this.gSTDataSet2.HSNCodetbl);
+            this.comboBox1.SelectedIndex = 0;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

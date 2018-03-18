@@ -69,12 +69,6 @@
     <Compile Include="FrmCategory.Designer.cs">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCreateBillOfSupply.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCreateBillOfSupply.Designer.cs">
-      <DependentUpon>FrmCreateBillOfSupply.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCreateGSTINVOICE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +79,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GSTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GSTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GSTDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSTDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="HelperClass.cs" />
     <Compile Include="LoginForm.cs">
@@ -150,6 +154,28 @@
     </None>
     <None Include="GSTDataSet.xss">
       <DependentUpon>GSTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GSTDataSet1.xsc">
+      <DependentUpon>GSTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GSTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSTDataSet1.xss">
+      <DependentUpon>GSTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GSTDataSet2.xsc">
+      <DependentUpon>GSTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GSTDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSTDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSTDataSet2.xss">
+      <DependentUpon>GSTDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

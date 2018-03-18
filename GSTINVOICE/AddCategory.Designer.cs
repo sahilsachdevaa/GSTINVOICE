@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtCGST = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtItems = new System.Windows.Forms.TextBox();
             this.txtGST = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,27 @@
             this.groupBox1.Text = "Enter Category Detail";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label1.Location = new System.Drawing.Point(250, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 25);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Description";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(389, 148);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(263, 82);
+            this.txtDescription.TabIndex = 2;
+            // 
             // txtCGST
             // 
             this.txtCGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,7 +100,7 @@
             this.txtCGST.Multiline = true;
             this.txtCGST.Name = "txtCGST";
             this.txtCGST.Size = new System.Drawing.Size(263, 25);
-            this.txtCGST.TabIndex = 4;
+            this.txtCGST.TabIndex = 5;
             // 
             // label5
             // 
@@ -112,7 +133,7 @@
             this.txtSGST.Multiline = true;
             this.txtSGST.Name = "txtSGST";
             this.txtSGST.Size = new System.Drawing.Size(263, 25);
-            this.txtSGST.TabIndex = 5;
+            this.txtSGST.TabIndex = 6;
             // 
             // txtHSN
             // 
@@ -121,7 +142,7 @@
             this.txtHSN.Multiline = true;
             this.txtHSN.Name = "txtHSN";
             this.txtHSN.Size = new System.Drawing.Size(263, 25);
-            this.txtHSN.TabIndex = 2;
+            this.txtHSN.TabIndex = 3;
             // 
             // label9
             // 
@@ -191,10 +212,8 @@
             this.txtItems.Location = new System.Drawing.Point(389, 70);
             this.txtItems.Multiline = true;
             this.txtItems.Name = "txtItems";
-            this.txtItems.Size = new System.Drawing.Size(263, 82);
-            this.txtItems.TabIndex = 1;
             this.txtItems.Size = new System.Drawing.Size(263, 51);
-            this.txtItems.TabIndex = 2;
+            this.txtItems.TabIndex = 1;
             // 
             // txtGST
             // 
@@ -203,28 +222,7 @@
             this.txtGST.Multiline = true;
             this.txtGST.Name = "txtGST";
             this.txtGST.Size = new System.Drawing.Size(263, 25);
-            this.txtGST.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(250, 174);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 25);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Description";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(389, 148);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(263, 82);
-            this.txtDescription.TabIndex = 18;
+            this.txtGST.TabIndex = 4;
             // 
             // AddCategory
             // 

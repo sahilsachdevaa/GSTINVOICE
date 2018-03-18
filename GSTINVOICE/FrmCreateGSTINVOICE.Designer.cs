@@ -17,6 +17,7 @@
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -47,6 +48,7 @@
             this.cgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdSgstAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txttotalinvoice = new System.Windows.Forms.TextBox();
@@ -114,7 +116,7 @@
             this.txtCustomer.Location = new System.Drawing.Point(399, 85);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(251, 20);
-            this.txtCustomer.TabIndex = 6;
+            this.txtCustomer.TabIndex = 0;
             this.txtCustomer.TextChanged += new System.EventHandler(this.txtCustomer_TextChanged);
             // 
             // label4
@@ -141,7 +143,8 @@
             this.cgst,
             this.cgstamount,
             this.Sgstamount,
-            this.grdSgstAmount});
+            this.grdSgstAmount,
+            this.catid});
             this.dataGridView1.Location = new System.Drawing.Point(12, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1244, 214);
@@ -215,6 +218,14 @@
             this.grdSgstAmount.HeaderText = "Amount";
             this.grdSgstAmount.Name = "grdSgstAmount";
             this.grdSgstAmount.ReadOnly = true;
+            // 
+            // catid
+            // 
+            this.catid.HeaderText = "Column1";
+            this.catid.Name = "catid";
+            this.catid.ReadOnly = true;
+            this.catid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.catid.Width = 5;
             // 
             // label9
             // 
@@ -340,9 +351,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(115, 450);
+            this.btnSave.Location = new System.Drawing.Point(51, 480);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(122, 52);
             this.btnSave.TabIndex = 39;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -412,6 +423,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtgrandtotal;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hsccode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
@@ -423,6 +435,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cgstamount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sgstamount;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdSgstAmount;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn catid;
     }
 }

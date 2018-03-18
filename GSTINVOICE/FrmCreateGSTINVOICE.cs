@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GSTINVOICE
@@ -59,8 +55,6 @@ namespace GSTINVOICE
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            //      string value = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-
             int column = dataGridView1.CurrentCell.ColumnIndex;
 
             if (column == 0)
@@ -73,15 +67,12 @@ namespace GSTINVOICE
                         var categoryid = this.CatID;
                         this.UpdateGridOnCategorySelection();
                     }
-
-                    //string qty = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    //var val = Convert.ToInt32(value);
-                    //var qtyval = Convert.ToInt32(qty);
-                    //dataGridView1.Rows[e.RowIndex].Cells[4].Value = (val * qtyval).ToString();
+                    
+                    dataGridView1.CurrentRow.Cells[11].Value = this.CatID;
                 }
                 catch (Exception ex)
                 {
-
+                    throw;
                 }
             }
 
@@ -157,11 +148,22 @@ namespace GSTINVOICE
         private void FrmCreateGSTINVOICE_Load(object sender, EventArgs e)
         {
             OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
-            OleDbDataAdapter da = new OleDbDataAdapter("Select * from Invoicetbl", conn);
+            string query = string.Empty;
+
+            if (isGstForm)
+            {
+                query = "Select * from GSTInvoicetbl";
+            }
+            else
+            {
+                query = "Select * from BOSInvoicetbl";
+            }
+
+            OleDbDataAdapter da = new OleDbDataAdapter(query, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             int counter = dt.Rows.Count;
-            string invoice = this.genrateInvoiceCode(counter);
+            string invoice = this.genrateInvoiceCode(counter + 1);
             txtInvoice.Text = invoice;
             txtinvoicedate.Text = DateTime.Now.ToShortDateString();
             txtCustomer.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -193,7 +195,12 @@ namespace GSTINVOICE
             {
                 str = "00" + str;
             }
-            return "IN" + str;
+
+            if (this.isGstForm)
+            {
+                return "IN" + str;
+            }
+            return "BS" + str;
         }
 
         private string genrateInvoiceCode()
@@ -220,18 +227,80 @@ namespace GSTINVOICE
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            SaveTextBoxValues();
+            SaveGridData();
+            MessageBox.Show("Record Saved Succesfully");
+            this.btnSave.Enabled = false;
+        }
+
+        private void SaveGridData()
+        {
             OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
-            var getHSNValue = dataGridView1.CurrentRow.Cells[1].Value;
-            var getQuantity = dataGridView1.CurrentRow.Cells[2].Value;
-            var getRate = dataGridView1.CurrentRow.Cells[3].Value;
-            var getSGST = dataGridView1.CurrentRow.Cells[9].Value;
-            var getCGST = dataGridView1.CurrentRow.Cells[7].Value;
-            double getGrandTotal = Convert.ToDouble(txtgrandtotal.Text);
-            OleDbCommand cmd = new OleDbCommand("insert into [Invoicetbl] (InvoiceNo, HSN/Sac,Quantity,Rate,SGST%,CGST%,GrandTotal) values ('" + txtInvoice.Text + "','" + getHSNValue.ToString() + "','" + getQuantity.ToString() + "','" + getRate.ToString() + "','" + getSGST.ToString() + "','" + getCGST.ToString() + "','"+txtgrandtotal.Text+"')", conn);
+            OleDbCommand cmd = new OleDbCommand();
+            conn.Open();
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                StringBuilder cmdtext = new StringBuilder();
+                var invoiceno = this.txtInvoice.Text;
+                var GoodsDetail = dataGridView1.Rows[i].Cells[0].Value;
+                var CategoryId = dataGridView1.Rows[i].Cells[11].Value;
+                var discount = dataGridView1.Rows[i].Cells[5].Value ?? 0;
+                var Qty = dataGridView1.Rows[i].Cells[2].Value;
+                var TotalSale = dataGridView1.Rows[i].Cells[4].Value;
+                var TaxableValue = dataGridView1.Rows[i].Cells[6].Value;
+                if (GoodsDetail == null)
+                {
+                    break;
+                }
+
+                if (isGstForm)
+                {
+                    cmdtext.AppendLine("insert into [GstTransactions] " +
+                       "(GoodsDetail, CategoryId,discount,Qty,TotalSale,TaxableValue,InvoiceID) values" +
+                       " ('" + GoodsDetail + "',"
+                       + CategoryId + "," + discount + "," + Qty + ","
+                       + TotalSale + "," + TaxableValue
+                       + ",'" + invoiceno + "')");
+                }
+                else
+                {
+                    cmdtext.AppendLine("insert into [BOSTransactions] " +
+           "(GoodsDetail, CategoryId,discount,Qty,TotalSale,TaxableValue,InvoiceID) values" +
+           " ('" + GoodsDetail + "',"
+           + CategoryId + "," + discount + "," + Qty + ","
+           + TotalSale + "," + TaxableValue
+           + ",'" + invoiceno + "')");
+
+                }
+                cmd.Connection = conn;
+                cmd.CommandText = cmdtext.ToString();
+                cmd.ExecuteNonQuery();
+             }
+            conn.Close();
+          }
+
+        public void SaveTextBoxValues()
+        {
+            OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
+            string sql = null;
+            DateTime date = Convert.ToDateTime(txtinvoicedate.Text);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select ID from Customertbl where CustomerName ='" + txtCustomer.Text+"'", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            int getid =Convert.ToInt16(dt.Rows[0][0]);
+
+
+            string query = "insert into " + (isGstForm ? "[GSTInvoicetbl]": "[BOSInvoicetbl]") +
+                "(InvoiceNo, customerid,invoiceDate,TotalInvoiceValue,Discount,TotalDiscountValue,TotalCgst,totalsgst,GrandTotal) values" +
+                " ('" + txtInvoice.Text + "'," + getid + ",'"
+                + date + "'," + txttotalinvoice.Text + ",0,"
+                + txttotaldiscounts.Text + "," + txttotalCgst.Text
+                + "," + txttotalCgst.Text + "," + txtgrandtotal.Text + ")";
+
+            OleDbCommand cmd = new OleDbCommand(query, conn);
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Customer Saved Successfully..!!");
-        }
+           }
     }
 }
