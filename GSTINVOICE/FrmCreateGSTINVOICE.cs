@@ -78,14 +78,16 @@ namespace GSTINVOICE
 
             try
             {
-                if (column == 3 || column == 2)
+                if (column == 3 || column == 2 || column == 5)
                 {
                     var qty = dataGridView1.CurrentRow.Cells[2].Value;
                     var amount = dataGridView1.CurrentRow.Cells[3].Value;
                     var cgst = dataGridView1.CurrentRow.Cells[7].Value;
                     var sgst = dataGridView1.CurrentRow.Cells[9].Value;
-                    if (amount != null && cgst != null && sgst != null && qty != null)
+                    var getdiscountvalue = dataGridView1.CurrentRow.Cells[5].Value;
+                    if (amount != null && cgst != null && sgst != null && qty != null && getdiscountvalue !=null)
                     {
+                        
                         double rate = Convert.ToDouble(amount);
                         double totalsale = Convert.ToDouble(qty) * rate;
                         double cgstamount = ((double)cgst * totalsale / 100);
@@ -98,13 +100,16 @@ namespace GSTINVOICE
                         double sumtotalsale = 0;
                         double sumtotalcgst = 0;
                         double sumtotalsgst = 0;
-                        double sumtotaldiscount = 0;
+                        double sumtotaldiscount =0;
+
                         for (int i = 0; i < dataGridView1.Rows.Count; ++i)
                         {
+                            double addtotalsalevalue = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value) + Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value);
+                            double discount = Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
+                            sumtotaldiscount += (addtotalsalevalue * discount / 100);
                             sumtotalcgst += Convert.ToDouble(dataGridView1.Rows[i].Cells[8].Value);
                             sumtotalsgst += Convert.ToDouble(dataGridView1.Rows[i].Cells[10].Value);
                             sumtotalsale += Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
-                            sumtotaldiscount += Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
                         }
 
                         txttotalCgst.Text = sumtotalcgst.ToString();
@@ -133,6 +138,7 @@ namespace GSTINVOICE
             dataGridView1.CurrentRow.Cells[1].Value = dt.Rows[0][2];
             dataGridView1.CurrentRow.Cells[7].Value = dt.Rows[0][5];
             dataGridView1.CurrentRow.Cells[9].Value = dt.Rows[0][6];
+            dataGridView1.CurrentRow.Cells[5].Value = 0;
             DataGridViewCell cell = dataGridView1.CurrentRow.Cells[2];
             dataGridView1.CurrentCell = cell;
             dataGridView1.BeginEdit(true);

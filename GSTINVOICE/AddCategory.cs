@@ -38,6 +38,36 @@ namespace GSTINVOICE
                 {
                     OleDbCommand cmd = new OleDbCommand("insert into [HSNCodetbl] (Category,HSN_SAC,Description,GST,CGST,SGST) values ('" + txtItems.Text  + "','"+ txtHSN.Text + "','" + txtDescription.Text + "'," + txtGST.Text + "," + txtCGST.Text + "," + txtSGST.Text + ")", con);
                     con.Open();
+                    if (txtItems.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Name");
+                        return;
+                    }
+                    else if (txtHSN.Text == "")
+                    {
+                        MessageBox.Show("Please Enter HSN");
+                        return;
+                    }
+                    else if (txtDescription.Text == "")
+                    {
+                        MessageBox.Show("Please Enter Description");
+                        return;
+                    }
+                    else if (txtGST.Text == "")
+                    {
+                        MessageBox.Show("Please Enter GST");
+                        return;
+                    }
+                    else if (txtCGST.Text == "")
+                    {
+                        MessageBox.Show("Please Enter CGST");
+                        return;
+                    }
+                    else if (txtSGST.Text == "")
+                    {
+                        MessageBox.Show("Please Enter SGST");
+                        return;
+                    }
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Category Saved Successfully..!!");
