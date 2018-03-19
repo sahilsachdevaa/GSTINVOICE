@@ -24,7 +24,7 @@ namespace GSTINVOICE
         {
             // TODO: This line of code loads data into the 'gSTDataSet2.HSNCodetbl' table. You can move, or remove it, as needed.
             this.hSNCodetblTableAdapter.Fill(this.gSTDataSet2.HSNCodetbl);
-            this.comboBox1.SelectedIndex = 0;
+            this.comboBox1.SelectedIndex = 1;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
