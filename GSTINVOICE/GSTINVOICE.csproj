@@ -32,9 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +65,22 @@
     </Compile>
     <Compile Include="AddCustomerFrm.Designer.cs">
       <DependentUpon>AddCustomerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonDs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonDs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Contractor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Contractor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCreateGSTINVOICE.cs">
       <SubType>Form</SubType>
@@ -97,6 +116,12 @@
     <Compile Include="MDIContainer.Designer.cs">
       <DependentUpon>MDIContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintGstInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintGstInvoice.Designer.cs">
+      <DependentUpon>PrintGstInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectCategory.cs">
@@ -105,6 +130,7 @@
     <Compile Include="SelectCategory.Designer.cs">
       <DependentUpon>SelectCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,14 +140,21 @@
     <EmbeddedResource Include="AddCustomerFrm.resx">
       <DependentUpon>AddCustomerFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateGSTINVOICE.resx">
       <DependentUpon>FrmCreateGSTINVOICE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GSTINVOICErpt.rdlc" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIContainer.resx">
       <DependentUpon>MDIContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintGstInvoice.resx">
+      <DependentUpon>PrintGstInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +168,28 @@
     <EmbeddedResource Include="SelectCategory.resx">
       <DependentUpon>SelectCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CommonDs.xsc">
+      <DependentUpon>CommonDs.xsd</DependentUpon>
+    </None>
+    <None Include="CommonDs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CommonDs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CommonDs.xss">
+      <DependentUpon>CommonDs.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Contractor.xsc">
+      <DependentUpon>DS_Contractor.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Contractor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Contractor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Contractor.xss">
+      <DependentUpon>DS_Contractor.xsd</DependentUpon>
+    </None>
     <None Include="GSTDataSet.xsc">
       <DependentUpon>GSTDataSet.xsd</DependentUpon>
     </None>
@@ -168,6 +223,7 @@
     <None Include="GSTDataSet2.xss">
       <DependentUpon>GSTDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -185,6 +241,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\47812606-5d7d-4c14-a28e-0c0bdfb2cc4f.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
