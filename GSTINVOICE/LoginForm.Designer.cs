@@ -102,9 +102,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(42, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 26);
+            this.label4.Size = new System.Drawing.Size(126, 26);
             this.label4.TabIndex = 1;
-            this.label4.Text = "UserName:-";
+            this.label4.Text = "UserName*";
             // 
             // txtPassword
             // 
@@ -132,9 +132,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(42, 139);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 26);
+            this.label5.Size = new System.Drawing.Size(117, 26);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Password";
+            this.label5.Text = "Password*";
             // 
             // LoginForm
             // 

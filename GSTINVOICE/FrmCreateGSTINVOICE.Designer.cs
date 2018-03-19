@@ -92,14 +92,14 @@
             this.txtInvoice.Name = "txtInvoice";
             this.txtInvoice.ReadOnly = true;
             this.txtInvoice.Size = new System.Drawing.Size(147, 20);
-            this.txtInvoice.TabIndex = 2;
+            this.txtInvoice.TabIndex = 0;
             // 
             // txtinvoicedate
             // 
             this.txtinvoicedate.Location = new System.Drawing.Point(833, 86);
             this.txtinvoicedate.Name = "txtinvoicedate";
             this.txtinvoicedate.Size = new System.Drawing.Size(147, 20);
-            this.txtinvoicedate.TabIndex = 4;
+            this.txtinvoicedate.TabIndex = 0;
             // 
             // label3
             // 
@@ -116,7 +116,7 @@
             this.txtCustomer.Location = new System.Drawing.Point(399, 85);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(251, 20);
-            this.txtCustomer.TabIndex = 0;
+            this.txtCustomer.TabIndex = 1;
             this.txtCustomer.TextChanged += new System.EventHandler(this.txtCustomer_TextChanged);
             // 
             // label4
@@ -148,7 +148,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1244, 214);
-            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
@@ -251,8 +251,9 @@
             // 
             this.txttotalinvoice.Location = new System.Drawing.Point(1092, 408);
             this.txttotalinvoice.Name = "txttotalinvoice";
+            this.txttotalinvoice.ReadOnly = true;
             this.txttotalinvoice.Size = new System.Drawing.Size(143, 20);
-            this.txttotalinvoice.TabIndex = 28;
+            this.txttotalinvoice.TabIndex = 0;
             // 
             // label6
             // 
@@ -268,8 +269,9 @@
             // 
             this.txttotaldiscounts.Location = new System.Drawing.Point(1092, 434);
             this.txttotaldiscounts.Name = "txttotaldiscounts";
+            this.txttotaldiscounts.ReadOnly = true;
             this.txttotaldiscounts.Size = new System.Drawing.Size(143, 20);
-            this.txttotaldiscounts.TabIndex = 30;
+            this.txttotaldiscounts.TabIndex = 0;
             // 
             // label7
             // 
@@ -285,8 +287,9 @@
             // 
             this.txttotalTaxval.Location = new System.Drawing.Point(1092, 460);
             this.txttotalTaxval.Name = "txttotalTaxval";
+            this.txttotalTaxval.ReadOnly = true;
             this.txttotalTaxval.Size = new System.Drawing.Size(143, 20);
-            this.txttotalTaxval.TabIndex = 32;
+            this.txttotalTaxval.TabIndex = 0;
             // 
             // label8
             // 
@@ -302,8 +305,9 @@
             // 
             this.txttotalCgst.Location = new System.Drawing.Point(1092, 486);
             this.txttotalCgst.Name = "txttotalCgst";
+            this.txttotalCgst.ReadOnly = true;
             this.txttotalCgst.Size = new System.Drawing.Size(143, 20);
-            this.txttotalCgst.TabIndex = 34;
+            this.txttotalCgst.TabIndex = 0;
             // 
             // label10
             // 
@@ -319,8 +323,9 @@
             // 
             this.txttotalsgst.Location = new System.Drawing.Point(1092, 512);
             this.txttotalsgst.Name = "txttotalsgst";
+            this.txttotalsgst.ReadOnly = true;
             this.txttotalsgst.Size = new System.Drawing.Size(143, 20);
-            this.txttotalsgst.TabIndex = 36;
+            this.txttotalsgst.TabIndex = 0;
             // 
             // label11
             // 
@@ -336,8 +341,9 @@
             // 
             this.txtgrandtotal.Location = new System.Drawing.Point(1092, 538);
             this.txtgrandtotal.Name = "txtgrandtotal";
+            this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(143, 20);
-            this.txtgrandtotal.TabIndex = 38;
+            this.txtgrandtotal.TabIndex = 0;
             // 
             // label12
             // 
@@ -354,7 +360,7 @@
             this.btnSave.Location = new System.Drawing.Point(51, 480);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(122, 52);
-            this.btnSave.TabIndex = 39;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
