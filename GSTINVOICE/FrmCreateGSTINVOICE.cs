@@ -345,5 +345,41 @@ namespace GSTINVOICE
         {
             this.txtinvoicedate.Text = dateTimePicker1.Value.Date.ToShortDateString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.ClearForm();
+        }
+
+        private void ClearForm()
+        {
+            OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
+            string query = string.Empty;
+
+            if (isGstForm)
+            {
+                query = "Select * from GSTInvoicetbl";
+            }
+            else
+            {
+                query = "Select * from BOSInvoicetbl";
+            }
+
+            OleDbDataAdapter da = new OleDbDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            int counter = dt.Rows.Count;
+            string invoice = this.genrateInvoiceCode(counter + 1);
+            txtInvoice.Text = invoice;
+            dataGridView1.Rows.Clear();
+            txttotalCgst.Clear();
+            txttotaldiscounts.Clear();
+            txttotalsgst.Clear();
+            txttotalTaxval.Clear();
+            txtgrandtotal.Clear();
+            txtCustomer.Clear();
+            txtCustomer.Focus();
+            txttotalinvoice.Clear();
+        }
     }
 }
