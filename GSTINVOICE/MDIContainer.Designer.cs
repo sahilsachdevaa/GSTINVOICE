@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fIleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.billInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addContracterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.billInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,12 +58,12 @@
             this.fIleToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fIleToolStripMenuItem.Text = "File";
             // 
-            // productsToolStripMenuItem
+            // billInvoiceToolStripMenuItem
             // 
-            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.productsToolStripMenuItem.Text = "Add Customer";
-            this.productsToolStripMenuItem.Click += new System.EventHandler(this.productsToolStripMenuItem_Click);
+            this.billInvoiceToolStripMenuItem.Name = "billInvoiceToolStripMenuItem";
+            this.billInvoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.billInvoiceToolStripMenuItem.Text = "Bill of Supply";
+            this.billInvoiceToolStripMenuItem.Click += new System.EventHandler(this.billInvoiceToolStripMenuItem_Click);
             // 
             // addContracterToolStripMenuItem
             // 
@@ -79,12 +79,12 @@
             this.addCategoryToolStripMenuItem.Text = "Add Category";
             this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
             // 
-            // billInvoiceToolStripMenuItem
+            // productsToolStripMenuItem
             // 
-            this.billInvoiceToolStripMenuItem.Name = "billInvoiceToolStripMenuItem";
-            this.billInvoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.billInvoiceToolStripMenuItem.Text = "Bill Invoice";
-            this.billInvoiceToolStripMenuItem.Click += new System.EventHandler(this.billInvoiceToolStripMenuItem_Click);
+            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productsToolStripMenuItem.Text = "Add Customer";
+            this.productsToolStripMenuItem.Click += new System.EventHandler(this.productsToolStripMenuItem_Click);
             // 
             // MDIContainer
             // 

@@ -76,12 +76,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Contractor.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCategory.Designer.cs">
-      <DependentUpon>FrmCategory.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCreateGSTINVOICE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,9 +133,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddCustomerFrm.resx">
       <DependentUpon>AddCustomerFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategory.resx">
-      <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateGSTINVOICE.resx">
       <DependentUpon>FrmCreateGSTINVOICE.cs</DependentUpon>
