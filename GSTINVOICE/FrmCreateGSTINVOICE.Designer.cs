@@ -64,6 +64,7 @@
             this.txtgrandtotal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -365,11 +366,20 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(999, 86);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
+            this.dateTimePicker1.TabIndex = 38;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // FrmCreateGSTINVOICE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 570);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtgrandtotal);
             this.Controls.Add(this.label12);
@@ -442,5 +452,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sgstamount;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdSgstAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn catid;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
