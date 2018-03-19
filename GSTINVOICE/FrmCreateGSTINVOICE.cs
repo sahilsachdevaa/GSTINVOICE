@@ -233,10 +233,35 @@ namespace GSTINVOICE
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveTextBoxValues();
-            SaveGridData();
-            MessageBox.Show("Record Saved Succesfully");
-            this.btnSave.Enabled = false;
+            try
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    if (dataGridView1.Rows[i].Cells[0].Value == null && dataGridView1.Rows[i].Cells[1].Value == null)
+                    {
+                        break;
+                    }
+
+                    var ts = (double)dataGridView1.Rows[i].Cells[4].Value;
+                    var tta = (double)dataGridView1.Rows[i].Cells[6].Value;
+                }
+
+                if (string.IsNullOrEmpty(txtCustomer.Text) || string.IsNullOrEmpty(txtCustomer.Text))
+                {
+                    MessageBox.Show("please check fields");
+                    return;
+                }
+
+                SaveTextBoxValues();
+                SaveGridData();
+                MessageBox.Show("Record Saved Succesfully");
+                this.btnSave.Enabled = false;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error Validating invoice");
+            }
         }
 
         private void SaveGridData()
