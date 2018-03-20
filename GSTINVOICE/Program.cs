@@ -27,7 +27,7 @@ namespace GSTINVOICE
             Console.Read();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new MDIContainer());
+            Application.Run(new PrintGstInvoice());
         }
     }
 }

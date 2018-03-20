@@ -34,13 +34,13 @@ namespace GSTINVOICE
             {
                 ReportDataSource rdscont = new ReportDataSource("rpt_Contactor", contds.Tables[0]);
                 ReportDataSource rdscust = new ReportDataSource("rpt_Customer", custds.Tables[0]);
-                ReportDataSource rdsgsinv = new ReportDataSource("rpt_gsTrans", gstransds.Tables[0]);
+                ReportDataSource rdsgstinv = new ReportDataSource("rpt_GstTrans", gstransds.Tables[0]);
                 ReportDataSource rdsgstrans = new ReportDataSource("rpt_gsinvoice", gsinvoiceds.Tables[0]);
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(rdscont);
                 reportViewer1.LocalReport.DataSources.Add(rdscust);
-                reportViewer1.LocalReport.DataSources.Add(rdsgsinv);
                 reportViewer1.LocalReport.DataSources.Add(rdsgstrans);
+                reportViewer1.LocalReport.DataSources.Add(rdsgstinv);
                 reportViewer1.LocalReport.Refresh();
                 reportViewer1.RefreshReport();
             }
@@ -76,7 +76,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("Select * from GstTransactions where invoiceID ='"+p+"'", con);
+                    OleDbCommand cmd = new OleDbCommand("SELECT GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST FROM (GstTransactions INNER JOIN HSNCodetbl ON GstTransactions.CategoryId = HSNCodetbl.ID) where GstTransactions.invoiceID ='" + p + "'", con);
                     OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
