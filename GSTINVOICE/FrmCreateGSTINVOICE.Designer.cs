@@ -64,6 +64,8 @@
             this.txtgrandtotal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +118,7 @@
             this.txtCustomer.Location = new System.Drawing.Point(399, 85);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(251, 20);
-            this.txtCustomer.TabIndex = 1;
+            this.txtCustomer.TabIndex = 0;
             this.txtCustomer.TextChanged += new System.EventHandler(this.txtCustomer_TextChanged);
             // 
             // label4
@@ -148,7 +150,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1244, 214);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
@@ -253,7 +255,7 @@
             this.txttotalinvoice.Name = "txttotalinvoice";
             this.txttotalinvoice.ReadOnly = true;
             this.txttotalinvoice.Size = new System.Drawing.Size(143, 20);
-            this.txttotalinvoice.TabIndex = 0;
+            this.txttotalinvoice.TabIndex = 9;
             // 
             // label6
             // 
@@ -271,7 +273,7 @@
             this.txttotaldiscounts.Name = "txttotaldiscounts";
             this.txttotaldiscounts.ReadOnly = true;
             this.txttotaldiscounts.Size = new System.Drawing.Size(143, 20);
-            this.txttotaldiscounts.TabIndex = 0;
+            this.txttotaldiscounts.TabIndex = 8;
             // 
             // label7
             // 
@@ -289,7 +291,7 @@
             this.txttotalTaxval.Name = "txttotalTaxval";
             this.txttotalTaxval.ReadOnly = true;
             this.txttotalTaxval.Size = new System.Drawing.Size(143, 20);
-            this.txttotalTaxval.TabIndex = 0;
+            this.txttotalTaxval.TabIndex = 7;
             // 
             // label8
             // 
@@ -307,7 +309,7 @@
             this.txttotalCgst.Name = "txttotalCgst";
             this.txttotalCgst.ReadOnly = true;
             this.txttotalCgst.Size = new System.Drawing.Size(143, 20);
-            this.txttotalCgst.TabIndex = 0;
+            this.txttotalCgst.TabIndex = 6;
             // 
             // label10
             // 
@@ -325,7 +327,7 @@
             this.txttotalsgst.Name = "txttotalsgst";
             this.txttotalsgst.ReadOnly = true;
             this.txttotalsgst.Size = new System.Drawing.Size(143, 20);
-            this.txttotalsgst.TabIndex = 0;
+            this.txttotalsgst.TabIndex = 10;
             // 
             // label11
             // 
@@ -343,7 +345,7 @@
             this.txtgrandtotal.Name = "txtgrandtotal";
             this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(143, 20);
-            this.txtgrandtotal.TabIndex = 0;
+            this.txtgrandtotal.TabIndex = 152;
             // 
             // label12
             // 
@@ -365,11 +367,31 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(999, 86);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
+            this.dateTimePicker1.TabIndex = 38;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(220, 480);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 52);
+            this.button1.TabIndex = 153;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmCreateGSTINVOICE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 570);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtgrandtotal);
             this.Controls.Add(this.label12);
@@ -442,5 +464,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sgstamount;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdSgstAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn catid;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
     }
 }

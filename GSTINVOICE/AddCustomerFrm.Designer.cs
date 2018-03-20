@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.txtCustomerGSTIN);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(107, 75);
+            this.groupBox1.Location = new System.Drawing.Point(12, 39);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1073, 532);
             this.groupBox1.TabIndex = 44;
@@ -70,7 +70,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(483, 320);
+            this.txtEmail.Location = new System.Drawing.Point(439, 315);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(263, 27);
@@ -82,7 +82,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label2.Location = new System.Drawing.Point(284, 320);
+            this.label2.Location = new System.Drawing.Point(240, 315);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 25);
             this.label2.TabIndex = 16;
@@ -91,7 +91,7 @@
             // txtCustomerMobile
             // 
             this.txtCustomerMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerMobile.Location = new System.Drawing.Point(482, 270);
+            this.txtCustomerMobile.Location = new System.Drawing.Point(438, 265);
             this.txtCustomerMobile.Multiline = true;
             this.txtCustomerMobile.Name = "txtCustomerMobile";
             this.txtCustomerMobile.Size = new System.Drawing.Size(263, 27);
@@ -103,7 +103,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label3.Location = new System.Drawing.Point(287, 131);
+            this.label3.Location = new System.Drawing.Point(243, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 24);
             this.label3.TabIndex = 15;
@@ -112,7 +112,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(482, 78);
+            this.txtName.Location = new System.Drawing.Point(438, 73);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(263, 27);
@@ -124,7 +124,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label8.Location = new System.Drawing.Point(285, 218);
+            this.label8.Location = new System.Drawing.Point(241, 213);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 24);
             this.label8.TabIndex = 2;
@@ -135,7 +135,7 @@
             this.button3.BackColor = System.Drawing.Color.DimGray;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button3.Location = new System.Drawing.Point(537, 412);
+            this.button3.Location = new System.Drawing.Point(493, 407);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(213, 44);
             this.button3.TabIndex = 7;
@@ -148,7 +148,7 @@
             this.button4.BackColor = System.Drawing.Color.DimGray;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button4.Location = new System.Drawing.Point(286, 412);
+            this.button4.Location = new System.Drawing.Point(242, 407);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(213, 44);
             this.button4.TabIndex = 6;
@@ -162,7 +162,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label11.Location = new System.Drawing.Point(283, 270);
+            this.label11.Location = new System.Drawing.Point(239, 265);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 25);
             this.label11.TabIndex = 3;
@@ -174,7 +174,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label12.Location = new System.Drawing.Point(288, 78);
+            this.label12.Location = new System.Drawing.Point(244, 73);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(72, 25);
             this.label12.TabIndex = 4;
@@ -183,7 +183,7 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(482, 129);
+            this.txtAddress.Location = new System.Drawing.Point(438, 124);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(263, 61);
@@ -192,7 +192,7 @@
             // txtCustomerGSTIN
             // 
             this.txtCustomerGSTIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerGSTIN.Location = new System.Drawing.Point(482, 218);
+            this.txtCustomerGSTIN.Location = new System.Drawing.Point(438, 213);
             this.txtCustomerGSTIN.Multiline = true;
             this.txtCustomerGSTIN.Name = "txtCustomerGSTIN";
             this.txtCustomerGSTIN.Size = new System.Drawing.Size(263, 27);
@@ -203,12 +203,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1275, 643);
+            this.ClientSize = new System.Drawing.Size(1101, 643);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCustomerFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddCustomerFrm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

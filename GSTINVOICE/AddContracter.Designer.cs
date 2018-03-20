@@ -71,7 +71,7 @@
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(13, 57);
+            this.groupBox1.Location = new System.Drawing.Point(13, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1142, 545);
             this.groupBox1.TabIndex = 35;
@@ -98,6 +98,7 @@
             this.groupBox2.Controls.Add(this.txtUserName);
             this.groupBox2.Controls.Add(this.txtPassword);
             this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(569, 56);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(505, 263);
@@ -112,7 +113,7 @@
             this.txtconfirmpassword.Multiline = true;
             this.txtconfirmpassword.Name = "txtconfirmpassword";
             this.txtconfirmpassword.PasswordChar = '*';
-            this.txtconfirmpassword.Size = new System.Drawing.Size(263, 21);
+            this.txtconfirmpassword.Size = new System.Drawing.Size(263, 27);
             this.txtconfirmpassword.TabIndex = 8;
             // 
             // label3
@@ -143,8 +144,9 @@
             // 
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(217, 66);
+            this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(263, 23);
+            this.txtUserName.Size = new System.Drawing.Size(263, 27);
             this.txtUserName.TabIndex = 6;
             // 
             // txtPassword
@@ -154,7 +156,7 @@
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(263, 21);
+            this.txtPassword.Size = new System.Drawing.Size(263, 27);
             this.txtPassword.TabIndex = 7;
             // 
             // label14
@@ -173,8 +175,9 @@
             // 
             this.txtEmailID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailID.Location = new System.Drawing.Point(178, 209);
+            this.txtEmailID.Multiline = true;
             this.txtEmailID.Name = "txtEmailID";
-            this.txtEmailID.Size = new System.Drawing.Size(263, 23);
+            this.txtEmailID.Size = new System.Drawing.Size(263, 27);
             this.txtEmailID.TabIndex = 4;
             // 
             // button1
@@ -194,8 +197,9 @@
             // 
             this.txtMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMobile.Location = new System.Drawing.Point(178, 158);
+            this.txtMobile.Multiline = true;
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(263, 23);
+            this.txtMobile.Size = new System.Drawing.Size(263, 27);
             this.txtMobile.TabIndex = 3;
             // 
             // label1
@@ -214,8 +218,9 @@
             // 
             this.txtContractorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContractorName.Location = new System.Drawing.Point(178, 56);
+            this.txtContractorName.Multiline = true;
             this.txtContractorName.Name = "txtContractorName";
-            this.txtContractorName.Size = new System.Drawing.Size(263, 23);
+            this.txtContractorName.Size = new System.Drawing.Size(263, 27);
             this.txtContractorName.TabIndex = 1;
             // 
             // label8
@@ -293,8 +298,10 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(178, 106);
+            this.textBox3.MaxLength = 15;
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 23);
+            this.textBox3.Size = new System.Drawing.Size(263, 27);
             this.textBox3.TabIndex = 2;
             // 
             // AddContracter
@@ -302,7 +309,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1167, 614);
+            this.ClientSize = new System.Drawing.Size(1171, 637);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddContracter";

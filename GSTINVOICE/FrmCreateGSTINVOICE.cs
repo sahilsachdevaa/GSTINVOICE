@@ -90,9 +90,16 @@ namespace GSTINVOICE
                         
                         double rate = Convert.ToDouble(amount);
                         double totalsale = Convert.ToDouble(qty) * rate;
-                        double cgstamount = ((double)cgst * totalsale / 100);
-                        double sgstamount = ((double)sgst * totalsale / 100);
-                        double totaltax = cgstamount + sgstamount;
+                        double totaltax = 0;
+                        double dis = Convert.ToDouble(getdiscountvalue);
+                        if (dis > 0)
+                            totaltax = totalsale - (totalsale * dis / 100);
+                        else
+                            totaltax = totalsale;
+
+                        double cgstamount = ((double)cgst * totaltax / 100);
+                        double sgstamount = ((double)sgst * totaltax / 100);
+
                         dataGridView1.CurrentRow.Cells[4].Value = totalsale;
                         dataGridView1.CurrentRow.Cells[6].Value = totaltax;
                         dataGridView1.CurrentRow.Cells[8].Value = cgstamount;
@@ -104,7 +111,7 @@ namespace GSTINVOICE
 
                         for (int i = 0; i < dataGridView1.Rows.Count; ++i)
                         {
-                            double addtotalsalevalue = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value) + Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value);
+                            double addtotalsalevalue = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
                             double discount = Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
                             sumtotaldiscount += (addtotalsalevalue * discount / 100);
                             sumtotalcgst += Convert.ToDouble(dataGridView1.Rows[i].Cells[8].Value);
@@ -116,7 +123,7 @@ namespace GSTINVOICE
                         txttotalsgst.Text = sumtotalsgst.ToString();
                         txttotalinvoice.Text = sumtotalsale.ToString();
                         txttotaldiscounts.Text = sumtotaldiscount.ToString();
-                        txttotalTaxval.Text = (sumtotalcgst + sumtotalsgst).ToString();
+                        txttotalTaxval.Text = (sumtotalsale - sumtotaldiscount).ToString();
                         txtgrandtotal.Text = (sumtotalsale + sumtotalcgst + sumtotalsgst - sumtotaldiscount).ToString();
                     }
                 }
@@ -333,5 +340,46 @@ namespace GSTINVOICE
             cmd.ExecuteNonQuery();
             conn.Close();
            }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            this.txtinvoicedate.Text = dateTimePicker1.Value.Date.ToShortDateString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.ClearForm();
+        }
+
+        private void ClearForm()
+        {
+            OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
+            string query = string.Empty;
+
+            if (isGstForm)
+            {
+                query = "Select * from GSTInvoicetbl";
+            }
+            else
+            {
+                query = "Select * from BOSInvoicetbl";
+            }
+
+            OleDbDataAdapter da = new OleDbDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            int counter = dt.Rows.Count;
+            string invoice = this.genrateInvoiceCode(counter + 1);
+            txtInvoice.Text = invoice;
+            dataGridView1.Rows.Clear();
+            txttotalCgst.Clear();
+            txttotaldiscounts.Clear();
+            txttotalsgst.Clear();
+            txttotalTaxval.Clear();
+            txtgrandtotal.Clear();
+            txtCustomer.Clear();
+            txtCustomer.Focus();
+            txttotalinvoice.Clear();
+        }
     }
 }
