@@ -24,7 +24,7 @@ namespace GSTINVOICE
             DataSet contds = new DataSet();
             contds = GetContracterDataset("IN00001");
             DataSet custds = new DataSet();
-            custds = GetCustomerDataset(4);
+            custds = GetCustomerDataset(11);
             DataSet gstransds = new DataSet();
             gstransds = GetGSTranDataset("IN00001");
             DataSet gsinvoiceds = new DataSet();
@@ -76,7 +76,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("SELECT GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST FROM (GstTransactions INNER JOIN HSNCodetbl ON GstTransactions.CategoryId = HSNCodetbl.ID) where GstTransactions.invoiceID ='" + p + "'", con);
+                    OleDbCommand cmd = new OleDbCommand("SELECT GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST, GstTransactions.TCGST, GstTransactions.TSGST FROM (GstTransactions INNER JOIN HSNCodetbl ON GstTransactions.CategoryId = HSNCodetbl.ID) where GstTransactions.invoiceID ='" + p + "'", con);
                     OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
