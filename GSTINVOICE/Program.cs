@@ -16,14 +16,6 @@ namespace GSTINVOICE
         [STAThread]
         static void Main()
         {
-            DateTime dt1 = DateTime.Now;
-            DateTime dt2 = DateTime.Parse("04/30/2018");
-            int days = (dt2 - dt1).Days;
-            if (days <=0)
-            {
-                MessageBox.Show("There is an error in your application configuration .. please Contact Your Administrator.");
-                return;
-            }
             Console.Read();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
