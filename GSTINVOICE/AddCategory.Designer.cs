@@ -43,11 +43,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtItems = new System.Windows.Forms.TextBox();
             this.txtGST = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtDescription);
             this.groupBox1.Controls.Add(this.txtCGST);
@@ -224,6 +226,19 @@
             this.txtGST.Size = new System.Drawing.Size(263, 27);
             this.txtGST.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.button1.Location = new System.Drawing.Point(718, 463);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 44);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,5 +273,6 @@
         private System.Windows.Forms.TextBox txtGST;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Button button1;
     }
 }

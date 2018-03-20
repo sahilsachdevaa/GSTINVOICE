@@ -33,7 +33,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>GST Invoice</Value>
+                <Value>Bill of Supply</Value>
                 <Style>
                   <FontSize>16pt</FontSize>
                   <FontWeight>ExtraBold</FontWeight>

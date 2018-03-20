@@ -87,6 +87,17 @@ namespace GSTINVOICE
         public void EnableControls()
         {
             this.menuStrip1.Visible = true;
+            string dateString = "4/15/2018 7:10:24 AM";
+            DateTime dateFromString =
+                DateTime.Parse(dateString, System.Globalization.CultureInfo.InvariantCulture);
+            TimeSpan timespan = dateFromString - DateTime.Now;
+            var val = timespan.Days;
+            if (val < 0)
+            {
+                var result = MessageBox.Show("Technical problem, please contact support","Application error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Application.Exit();
+            }
+
         }
 
         private void billInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
