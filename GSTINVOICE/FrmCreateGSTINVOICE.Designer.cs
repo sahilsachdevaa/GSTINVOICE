@@ -120,6 +120,7 @@
             this.txtCustomer.Size = new System.Drawing.Size(251, 20);
             this.txtCustomer.TabIndex = 0;
             this.txtCustomer.TextChanged += new System.EventHandler(this.txtCustomer_TextChanged);
+            this.txtCustomer.Leave += new System.EventHandler(this.txtCustomer_Leave);
             // 
             // label4
             // 

@@ -92,6 +92,7 @@
             // 
             this.txtCustomerMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerMobile.Location = new System.Drawing.Point(438, 265);
+            this.txtCustomerMobile.MaxLength = 13;
             this.txtCustomerMobile.Multiline = true;
             this.txtCustomerMobile.Name = "txtCustomerMobile";
             this.txtCustomerMobile.Size = new System.Drawing.Size(263, 27);
@@ -193,6 +194,7 @@
             // 
             this.txtCustomerGSTIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerGSTIN.Location = new System.Drawing.Point(438, 213);
+            this.txtCustomerGSTIN.MaxLength = 15;
             this.txtCustomerGSTIN.Multiline = true;
             this.txtCustomerGSTIN.Name = "txtCustomerGSTIN";
             this.txtCustomerGSTIN.Size = new System.Drawing.Size(263, 27);

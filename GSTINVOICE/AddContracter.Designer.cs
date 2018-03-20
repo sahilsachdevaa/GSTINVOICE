@@ -102,7 +102,7 @@
             this.groupBox2.Location = new System.Drawing.Point(569, 56);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(505, 263);
-            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Credentials";
             // 
@@ -147,7 +147,7 @@
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(263, 27);
-            this.txtUserName.TabIndex = 6;
+            this.txtUserName.TabIndex = 7;
             // 
             // txtPassword
             // 
@@ -197,6 +197,7 @@
             // 
             this.txtMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMobile.Location = new System.Drawing.Point(178, 158);
+            this.txtMobile.MaxLength = 13;
             this.txtMobile.Multiline = true;
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(263, 27);
