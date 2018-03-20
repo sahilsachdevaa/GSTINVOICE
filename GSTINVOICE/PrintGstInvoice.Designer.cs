@@ -41,7 +41,6 @@
             this.CustomertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CustomertblTableAdapter = new GSTINVOICE.CommonDsTableAdapters.CustomertblTableAdapter();
             this.GstTransactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GstTransactionsTableAdapter = new GSTINVOICE.CommonDsTableAdapters.GstTransactionsTableAdapter();
             this.HSNCodetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.HSNCodetblTableAdapter = new GSTINVOICE.CommonDsTableAdapters.HSNCodetblTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DS_Contractor)).BeginInit();
@@ -108,7 +107,6 @@
             // 
             // GstTransactionsTableAdapter
             // 
-            this.GstTransactionsTableAdapter.ClearBeforeFill = true;
             // 
             // HSNCodetblBindingSource
             // 
@@ -133,7 +131,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ContractortblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommonDs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomertblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GstTransactionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HSNCodetblBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -150,7 +147,6 @@
         private System.Windows.Forms.BindingSource HSNCodetblBindingSource;
         private DS_ContractorTableAdapters.ContractortblTableAdapter ContractortblTableAdapter;
         private CommonDsTableAdapters.CustomertblTableAdapter CustomertblTableAdapter;
-        private CommonDsTableAdapters.GstTransactionsTableAdapter GstTransactionsTableAdapter;
         private CommonDsTableAdapters.HSNCodetblTableAdapter HSNCodetblTableAdapter;
     }
 }

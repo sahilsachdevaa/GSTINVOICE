@@ -81,6 +81,10 @@
     <Compile Include="AddCustomerFrm.Designer.cs">
       <DependentUpon>AddCustomerFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommonDs.cs">
+      <DependentUpon>CommonDs.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CommonDs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,6 +101,10 @@
     <Compile Include="FrmCreateGSTINVOICE.Designer.cs">
       <DependentUpon>FrmCreateGSTINVOICE.cs</DependentUpon>
     </Compile>
+    <Compile Include="GSTDataSet.cs">
+      <DependentUpon>GSTDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GSTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,6 +119,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GSTDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GSTDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSTDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="HelperClass.cs" />
     <Compile Include="LoginForm.cs">
@@ -236,6 +249,17 @@
     </None>
     <None Include="GSTDataSet2.xss">
       <DependentUpon>GSTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GSTDataSet3.xsc">
+      <DependentUpon>GSTDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GSTDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSTDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSTDataSet3.xss">
+      <DependentUpon>GSTDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

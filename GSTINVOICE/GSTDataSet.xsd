@@ -2,7 +2,7 @@
 <xs:schema id="GSTDataSet" targetNamespace="http://tempuri.org/GSTDataSet.xsd" xmlns:mstns="http://tempuri.org/GSTDataSet.xsd" xmlns="http://tempuri.org/GSTDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GSTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GSTConnectionString (Settings)" PropertyReference="ApplicationSettings.GSTINVOICE.Properties.Settings.GlobalReference.Default.GSTConnectionString" Provider="System.Data.OleDb" />
         </Connections>
@@ -96,7 +96,7 @@
   <xs:element name="GSTDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GSTDataSet" msprop:Generator_UserDSName="GSTDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="HSNCodetbl" msprop:Generator_TableClassName="HSNCodetblDataTable" msprop:Generator_TableVarName="tableHSNCodetbl" msprop:Generator_TablePropName="HSNCodetbl" msprop:Generator_RowDeletingName="HSNCodetblRowDeleting" msprop:Generator_RowChangingName="HSNCodetblRowChanging" msprop:Generator_RowEvHandlerName="HSNCodetblRowChangeEventHandler" msprop:Generator_RowDeletedName="HSNCodetblRowDeleted" msprop:Generator_UserTableName="HSNCodetbl" msprop:Generator_RowChangedName="HSNCodetblRowChanged" msprop:Generator_RowEvArgName="HSNCodetblRowChangeEvent" msprop:Generator_RowClassName="HSNCodetblRow">
+        <xs:element name="HSNCodetbl" msprop:Generator_TableClassName="HSNCodetblDataTable" msprop:Generator_TableVarName="tableHSNCodetbl" msprop:Generator_RowChangedName="HSNCodetblRowChanged" msprop:Generator_TablePropName="HSNCodetbl" msprop:Generator_RowDeletingName="HSNCodetblRowDeleting" msprop:Generator_RowChangingName="HSNCodetblRowChanging" msprop:Generator_RowEvHandlerName="HSNCodetblRowChangeEventHandler" msprop:Generator_RowDeletedName="HSNCodetblRowDeleted" msprop:Generator_RowClassName="HSNCodetblRow" msprop:Generator_UserTableName="HSNCodetbl" msprop:Generator_RowEvArgName="HSNCodetblRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
