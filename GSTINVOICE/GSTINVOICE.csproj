@@ -124,6 +124,12 @@
     <Compile Include="SelectCategory.Designer.cs">
       <DependentUpon>SelectCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewInvoiceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInvoiceDetail.Designer.cs">
+      <DependentUpon>ViewInvoiceDetail.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +163,9 @@
     </Compile>
     <EmbeddedResource Include="SelectCategory.resx">
       <DependentUpon>SelectCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewInvoiceDetail.resx">
+      <DependentUpon>ViewInvoiceDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CommonDs.xsc">
       <DependentUpon>CommonDs.xsd</DependentUpon>
