@@ -83,7 +83,7 @@ namespace GSTINVOICE
                         return;
                     }
 
-                    if (txtPassword.Text == txtconfirmpassword.Text)
+                    if (txtPassword.Text != txtconfirmpassword.Text)
                     {
                         MessageBox.Show("Password not matched");
                         return;

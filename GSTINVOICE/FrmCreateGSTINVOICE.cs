@@ -100,10 +100,10 @@ namespace GSTINVOICE
                         double cgstamount = ((double)cgst * totaltax / 100);
                         double sgstamount = ((double)sgst * totaltax / 100);
 
-                        dataGridView1.CurrentRow.Cells[4].Value = totalsale;
-                        dataGridView1.CurrentRow.Cells[6].Value = totaltax;
-                        dataGridView1.CurrentRow.Cells[8].Value = cgstamount;
-                        dataGridView1.CurrentRow.Cells[10].Value = sgstamount;
+                        dataGridView1.CurrentRow.Cells[4].Value =Math.Ceiling(totalsale);
+                        dataGridView1.CurrentRow.Cells[6].Value = Math.Ceiling(totaltax);
+                        dataGridView1.CurrentRow.Cells[8].Value = Math.Ceiling(cgstamount);
+                        dataGridView1.CurrentRow.Cells[10].Value = Math.Ceiling(sgstamount);
                         double sumtotalsale = 0;
                         double sumtotalcgst = 0;
                         double sumtotalsgst = 0;
@@ -113,7 +113,7 @@ namespace GSTINVOICE
                         {
                             double addtotalsalevalue = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
                             double discount = Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
-                            sumtotaldiscount += (addtotalsalevalue * discount / 100);
+                            sumtotaldiscount += Math.Ceiling((addtotalsalevalue * discount / 100));
                             sumtotalcgst += Convert.ToDouble(dataGridView1.Rows[i].Cells[8].Value);
                             sumtotalsgst += Convert.ToDouble(dataGridView1.Rows[i].Cells[10].Value);
                             sumtotalsale += Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
@@ -264,7 +264,7 @@ namespace GSTINVOICE
                 MessageBox.Show("Record Saved Succesfully");
                 this.btnSave.Enabled = false;
             }
-            catch (Exception)
+            catch (Exception ex) 
             {
 
                 MessageBox.Show("Error Validating invoice");
@@ -286,6 +286,8 @@ namespace GSTINVOICE
                 var Qty = dataGridView1.Rows[i].Cells[2].Value;
                 var TotalSale = dataGridView1.Rows[i].Cells[4].Value;
                 var TaxableValue = dataGridView1.Rows[i].Cells[6].Value;
+                var totalCGST= dataGridView1.Rows[i].Cells[8].Value;
+                var totalSGST= dataGridView1.Rows[i].Cells[10].Value;
                 if (GoodsDetail == null)
                 {
                     break;
@@ -294,20 +296,20 @@ namespace GSTINVOICE
                 if (isGstForm)
                 {
                     cmdtext.AppendLine("insert into [GstTransactions] " +
-                       "(GoodsDetail, CategoryId,discount,Qty,TotalSale,TaxableValue,InvoiceID) values" +
+                       "(GoodsDetail, CategoryId,discount,Qty,TotalSale,TaxableValue,InvoiceID,TCGST,TSGST) values" +
                        " ('" + GoodsDetail + "',"
                        + CategoryId + "," + discount + "," + Qty + ","
                        + TotalSale + "," + TaxableValue
-                       + ",'" + invoiceno + "')");
+                       + ",'" + invoiceno + "'," + totalCGST + "," + totalSGST + ")");
                 }
                 else
                 {
                     cmdtext.AppendLine("insert into [BOSTransactions] " +
-           "(GoodsDetail, CategoryId,discount,Qty,TotalSale,TaxableValue,InvoiceID) values" +
+           "(GoodsDetail, CategoryId,discount,Qty,TotalSale,TaxableValue,InvoiceID,TCGST,TSGST) values" +
            " ('" + GoodsDetail + "',"
            + CategoryId + "," + discount + "," + Qty + ","
            + TotalSale + "," + TaxableValue
-           + ",'" + invoiceno + "')");
+           + ",'" + invoiceno + "'," + totalCGST + "," + totalSGST + ")");
 
                 }
                 cmd.Connection = conn;
@@ -380,6 +382,7 @@ namespace GSTINVOICE
             txtCustomer.Clear();
             txtCustomer.Focus();
             txttotalinvoice.Clear();
+            btnSave.Enabled = true;
         }
     }
 }
