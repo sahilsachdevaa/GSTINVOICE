@@ -13,14 +13,22 @@ namespace GSTINVOICE
 {
     public partial class ViewInvoiceDetail : Form
     {
+        private bool isGstForm;
+
         public ViewInvoiceDetail()
         {
             InitializeComponent();
         }
 
+        public ViewInvoiceDetail(bool p):this()
+        {
+            // TODO: Complete member initialization
+            this.isGstForm = p;
+        }
+
         private void txtInvoice_Leave(object sender, EventArgs e)
         {
-          try
+            try
             {
                 if (txtInvoice.Text == "")
                 {
@@ -30,29 +38,54 @@ namespace GSTINVOICE
                 {
                     var getValue = txtInvoice.Text;
                     OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
-                    OleDbDataAdapter da = new OleDbDataAdapter("Select Customerid,invoiceDate,TotalInvoiceValue,Discount,TotalDiscountValue,TotalCgst,totalsgst,GrandTotal from BOSInvoicetbL where InvoiceNo='" + getValue + "'", conn);
+                    OleDbDataAdapter da = new OleDbDataAdapter("Select Customerid,invoiceDate,TotalInvoiceValue,TotalDiscountValue,TotalCgst,totalsgst,GrandTotal from BOSInvoicetbL where InvoiceNo='" + getValue + "'", conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    int value=Convert.ToInt16(dt.Rows[0][0]);
-                    OleDbDataAdapter da1 = new OleDbDataAdapter("Select CustomerName from Customertbl where Id=" + value,conn);
+                    int value = Convert.ToInt16(dt.Rows[0][0]);
+                    OleDbDataAdapter da1 = new OleDbDataAdapter("Select CustomerName from Customertbl where Id=" + value, conn);
                     DataTable dt1 = new DataTable();
                     da1.Fill(dt1);
                     txtCustomer.Text = dt1.Rows[0][0].ToString();
                     
                     txtinvoicedate.Text = dt.Rows[0][1].ToString();
-                    dataGridView1.Rows[0].Cells[2].Value = dt.Rows[0][2].ToString();
-                    dataGridView1.Rows[0].Cells[3].Value = dt.Rows[0][3].ToString();
-                    dataGridView1.Rows[0].Cells[4].Value = dt.Rows[0][4].ToString();
-                    dataGridView1.Rows[0].Cells[5].Value = dt.Rows[0][5].ToString();
-                    dataGridView1.Rows[0].Cells[7].Value = dt.Rows[0][6].ToString();
-                    dataGridView1.Rows[0].Cells[9].Value = dt.Rows[0][7].ToString();
-                }
+                    txttotalinvoice.Text = dt.Rows[0][2].ToString();
+                    txttotaldiscounts.Text= dt.Rows[0][3].ToString();
+                    txttotalCgst.Text= dt.Rows[0][4].ToString();
+                    txttotalsgst.Text = dt.Rows[0][5].ToString();
+                    txtgrandtotal.Text= dt.Rows[0][6].ToString();
+                    var InvoiceValue = Convert.ToDouble(txttotalinvoice.Text);
+                    var TotalDisVal= Convert.ToDouble(txttotaldiscounts.Text);
+                    txttotalTaxval.Text = (InvoiceValue - TotalDisVal).ToString();
+                    }
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
+        }
+
+        private void ViewInvoiceDetail_Load(object sender, EventArgs e)
+        {
+            txtInvoice.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtInvoice.AutoCompleteCustomSource = AutoCompleteLoad();
+            txtInvoice.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+        
+        public AutoCompleteStringCollection AutoCompleteLoad()
+        {
+            OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select InvoiceNo from GstInvoicetbl ", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            AutoCompleteStringCollection str = new AutoCompleteStringCollection();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+
+                str.Add(dt.Rows[i][0].ToString());
+
+            return str;
+
         }
     }
 }

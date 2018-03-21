@@ -34,6 +34,8 @@
             this.addContracterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewGSTInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewBillOfSupplyInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,9 @@
             this.billInvoiceToolStripMenuItem,
             this.addContracterToolStripMenuItem,
             this.addCategoryToolStripMenuItem,
-            this.productsToolStripMenuItem});
+            this.productsToolStripMenuItem,
+            this.viewGSTInvoiceToolStripMenuItem,
+            this.viewBillOfSupplyInvoiceToolStripMenuItem});
             this.fIleToolStripMenuItem.Name = "fIleToolStripMenuItem";
             this.fIleToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fIleToolStripMenuItem.Text = "File";
@@ -61,30 +65,44 @@
             // billInvoiceToolStripMenuItem
             // 
             this.billInvoiceToolStripMenuItem.Name = "billInvoiceToolStripMenuItem";
-            this.billInvoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.billInvoiceToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.billInvoiceToolStripMenuItem.Text = "Bill of Supply";
             this.billInvoiceToolStripMenuItem.Click += new System.EventHandler(this.billInvoiceToolStripMenuItem_Click);
             // 
             // addContracterToolStripMenuItem
             // 
             this.addContracterToolStripMenuItem.Name = "addContracterToolStripMenuItem";
-            this.addContracterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addContracterToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.addContracterToolStripMenuItem.Text = "GST Invoice";
             this.addContracterToolStripMenuItem.Click += new System.EventHandler(this.addContracterToolStripMenuItem_Click);
             // 
             // addCategoryToolStripMenuItem
             // 
             this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
-            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.addCategoryToolStripMenuItem.Text = "Add Category";
             this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
             // 
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.productsToolStripMenuItem.Text = "Add Customer";
             this.productsToolStripMenuItem.Click += new System.EventHandler(this.productsToolStripMenuItem_Click);
+            // 
+            // viewGSTInvoiceToolStripMenuItem
+            // 
+            this.viewGSTInvoiceToolStripMenuItem.Name = "viewGSTInvoiceToolStripMenuItem";
+            this.viewGSTInvoiceToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.viewGSTInvoiceToolStripMenuItem.Text = "View GST Invoice";
+            this.viewGSTInvoiceToolStripMenuItem.Click += new System.EventHandler(this.viewGSTInvoiceToolStripMenuItem_Click);
+            // 
+            // viewBillOfSupplyInvoiceToolStripMenuItem
+            // 
+            this.viewBillOfSupplyInvoiceToolStripMenuItem.Name = "viewBillOfSupplyInvoiceToolStripMenuItem";
+            this.viewBillOfSupplyInvoiceToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.viewBillOfSupplyInvoiceToolStripMenuItem.Text = "View Bill of Supply Invoice";
+            this.viewBillOfSupplyInvoiceToolStripMenuItem.Click += new System.EventHandler(this.viewBillOfSupplyInvoiceToolStripMenuItem_Click);
             // 
             // MDIContainer
             // 
@@ -112,6 +130,8 @@
         private System.Windows.Forms.ToolStripMenuItem addContracterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCategoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem billInvoiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewGSTInvoiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewBillOfSupplyInvoiceToolStripMenuItem;
     }
 }
 

@@ -40,7 +40,6 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(ConString))
                 {
-                    var txt = sender as TextBox;
                     OleDbCommand cmd = new OleDbCommand("insert into [Contractortbl] (ContractorName, Address,GSTIN,Mobile,EmailID,UserName,Pswd) values ('" + txtContractorName.Text + "','" + txtAddress.Text + "','" + textBox3.Text + "','" + txtMobile.Text + "','" + txtEmailID.Text + "','" + txtUserName.Text + "','" + txtPassword.Text + "')", con);
                     con.Open();
                     if (string.IsNullOrWhiteSpace(txtContractorName.Text))
@@ -115,6 +114,11 @@ namespace GSTINVOICE
         private void AddContracter_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox3.Text = textBox3.Text.ToString().ToUpper();
         }
     }
 }

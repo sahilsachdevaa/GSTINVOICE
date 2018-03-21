@@ -94,6 +94,18 @@ namespace GSTINVOICE
             HideAllMDIForms();
             new FrmCreateGSTINVOICE(false) { MdiParent = this }.Show();
         }
+
+        private void viewGSTInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllMDIForms();
+            new ViewInvoiceDetail(true) { MdiParent = this }.Show();
+        }
+
+        private void viewBillOfSupplyInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllMDIForms();
+            new ViewInvoiceDetail(false) { MdiParent = this }.Show();
+        }
     }
 
 }

@@ -66,6 +66,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.goodDesc,
@@ -80,15 +82,18 @@
             this.Sgstamount,
             this.grdSgstAmount,
             this.catid});
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(12, 141);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1244, 214);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1149, 214);
             this.dataGridView1.TabIndex = 3;
             // 
             // goodDesc
             // 
             this.goodDesc.HeaderText = "Description of Goods";
             this.goodDesc.Name = "goodDesc";
+            this.goodDesc.ReadOnly = true;
             this.goodDesc.Width = 250;
             // 
             // Hsccode
@@ -101,12 +106,14 @@
             // 
             this.Quantity.HeaderText = "Qty.";
             this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             this.Quantity.Width = 50;
             // 
             // Rate
             // 
             this.Rate.HeaderText = "Rate";
             this.Rate.Name = "Rate";
+            this.Rate.ReadOnly = true;
             // 
             // totalsale
             // 
@@ -118,6 +125,7 @@
             // 
             this.Discount.HeaderText = "Discount";
             this.Discount.Name = "Discount";
+            this.Discount.ReadOnly = true;
             // 
             // Taxableval
             // 
@@ -362,8 +370,11 @@
             this.Controls.Add(this.txtInvoice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewInvoiceDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ViewInvoiceDetail";
+            this.Load += new System.EventHandler(this.ViewInvoiceDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

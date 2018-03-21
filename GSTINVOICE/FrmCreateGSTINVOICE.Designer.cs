@@ -37,18 +37,6 @@
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.goodDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hsccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalsale = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Taxableval = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cgst = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdSgstAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txttotalinvoice = new System.Windows.Forms.TextBox();
@@ -66,6 +54,18 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.goodDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hsccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalsale = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Taxableval = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cgst = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdSgstAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,80 +155,6 @@
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
-            // 
-            // goodDesc
-            // 
-            this.goodDesc.HeaderText = "Description of Goods";
-            this.goodDesc.Name = "goodDesc";
-            this.goodDesc.Width = 250;
-            // 
-            // Hsccode
-            // 
-            this.Hsccode.HeaderText = "HSE/SAC Code";
-            this.Hsccode.Name = "Hsccode";
-            this.Hsccode.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Qty.";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 50;
-            // 
-            // Rate
-            // 
-            this.Rate.HeaderText = "Rate";
-            this.Rate.Name = "Rate";
-            // 
-            // totalsale
-            // 
-            this.totalsale.HeaderText = "Total Sale";
-            this.totalsale.Name = "totalsale";
-            this.totalsale.ReadOnly = true;
-            // 
-            // Discount
-            // 
-            this.Discount.HeaderText = "Discount";
-            this.Discount.Name = "Discount";
-            // 
-            // Taxableval
-            // 
-            this.Taxableval.HeaderText = "Taxable Value";
-            this.Taxableval.Name = "Taxableval";
-            this.Taxableval.ReadOnly = true;
-            // 
-            // cgst
-            // 
-            this.cgst.HeaderText = "CGST Rate %";
-            this.cgst.Name = "cgst";
-            this.cgst.ReadOnly = true;
-            this.cgst.Width = 50;
-            // 
-            // cgstamount
-            // 
-            this.cgstamount.HeaderText = "Amount";
-            this.cgstamount.Name = "cgstamount";
-            this.cgstamount.ReadOnly = true;
-            // 
-            // Sgstamount
-            // 
-            this.Sgstamount.HeaderText = "SGST Rate %";
-            this.Sgstamount.Name = "Sgstamount";
-            this.Sgstamount.ReadOnly = true;
-            this.Sgstamount.Width = 50;
-            // 
-            // grdSgstAmount
-            // 
-            this.grdSgstAmount.HeaderText = "Amount";
-            this.grdSgstAmount.Name = "grdSgstAmount";
-            this.grdSgstAmount.ReadOnly = true;
-            // 
-            // catid
-            // 
-            this.catid.HeaderText = "Column1";
-            this.catid.Name = "catid";
-            this.catid.ReadOnly = true;
-            this.catid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.catid.Width = 5;
             // 
             // label9
             // 
@@ -386,6 +312,80 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // goodDesc
+            // 
+            this.goodDesc.HeaderText = "Description of Goods";
+            this.goodDesc.Name = "goodDesc";
+            this.goodDesc.Width = 250;
+            // 
+            // Hsccode
+            // 
+            this.Hsccode.HeaderText = "HSE/SAC Code";
+            this.Hsccode.Name = "Hsccode";
+            this.Hsccode.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Qty.";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 50;
+            // 
+            // Rate
+            // 
+            this.Rate.HeaderText = "Rate";
+            this.Rate.Name = "Rate";
+            // 
+            // totalsale
+            // 
+            this.totalsale.HeaderText = "Total Sale";
+            this.totalsale.Name = "totalsale";
+            this.totalsale.ReadOnly = true;
+            // 
+            // Discount
+            // 
+            this.Discount.HeaderText = "Discount Percentage";
+            this.Discount.Name = "Discount";
+            // 
+            // Taxableval
+            // 
+            this.Taxableval.HeaderText = "Taxable Value";
+            this.Taxableval.Name = "Taxableval";
+            this.Taxableval.ReadOnly = true;
+            // 
+            // cgst
+            // 
+            this.cgst.HeaderText = "CGST Rate %";
+            this.cgst.Name = "cgst";
+            this.cgst.ReadOnly = true;
+            this.cgst.Width = 50;
+            // 
+            // cgstamount
+            // 
+            this.cgstamount.HeaderText = "Amount";
+            this.cgstamount.Name = "cgstamount";
+            this.cgstamount.ReadOnly = true;
+            // 
+            // Sgstamount
+            // 
+            this.Sgstamount.HeaderText = "SGST Rate %";
+            this.Sgstamount.Name = "Sgstamount";
+            this.Sgstamount.ReadOnly = true;
+            this.Sgstamount.Width = 50;
+            // 
+            // grdSgstAmount
+            // 
+            this.grdSgstAmount.HeaderText = "Amount";
+            this.grdSgstAmount.Name = "grdSgstAmount";
+            this.grdSgstAmount.ReadOnly = true;
+            // 
+            // catid
+            // 
+            this.catid.HeaderText = "Column1";
+            this.catid.Name = "catid";
+            this.catid.ReadOnly = true;
+            this.catid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.catid.Width = 5;
+            // 
             // FrmCreateGSTINVOICE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -453,6 +453,8 @@
         private System.Windows.Forms.TextBox txtgrandtotal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hsccode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
@@ -465,7 +467,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sgstamount;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdSgstAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn catid;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
     }
 }
