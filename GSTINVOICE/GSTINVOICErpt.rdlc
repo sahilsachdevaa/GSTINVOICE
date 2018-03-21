@@ -1757,98 +1757,6 @@
           </Border>
         </Style>
       </Tablix>
-      <Rectangle Name="Rectangle1">
-        <ReportItems>
-          <Textbox Name="Textbox32">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>1. Please mention your invoice number in Cheque</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>2. Please make sure your given information is correct</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox32</rd:DefaultName>
-            <Top>0.34028in</Top>
-            <Height>1.17361in</Height>
-            <Width>3.5in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox31">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Special Instructions</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox31</rd:DefaultName>
-            <Height>0.27083in</Height>
-            <Width>3.65625in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-              <BackgroundColor>Yellow</BackgroundColor>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-        </ReportItems>
-        <KeepTogether>true</KeepTogether>
-        <Top>3.78819in</Top>
-        <Left>0.155in</Left>
-        <Height>1.75in</Height>
-        <Width>3.65625in</Width>
-        <ZIndex>7</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Rectangle>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
@@ -2377,7 +2285,7 @@
         <Left>4.18673in</Left>
         <Height>1.75in</Height>
         <Width>2.87085in</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2386,11 +2294,11 @@
       </Tablix>
       <Rectangle Name="Rectangle2">
         <KeepTogether>true</KeepTogether>
-        <Top>5.94444in</Top>
+        <Top>6.23611in</Top>
         <Left>0.5925in</Left>
         <Height>0.69792in</Height>
         <Width>2in</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2399,11 +2307,11 @@
       </Rectangle>
       <Rectangle Name="Rectangle5">
         <KeepTogether>true</KeepTogether>
-        <Top>5.94444in</Top>
+        <Top>6.23611in</Top>
         <Left>4.76852in</Left>
         <Height>0.69792in</Height>
         <Width>2in</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2427,11 +2335,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox70</rd:DefaultName>
-        <Top>6.71181in</Top>
+        <Top>7.00347in</Top>
         <Left>0.79042in</Left>
         <Height>0.25in</Height>
         <Width>1.45834in</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2459,11 +2367,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox70</rd:DefaultName>
-        <Top>6.71181in</Top>
+        <Top>7.00347in</Top>
         <Left>5.07947in</Left>
         <Height>0.25in</Height>
         <Width>1.45834in</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2479,7 +2387,7 @@
         <Left>0.01958in</Left>
         <Height>0in</Height>
         <Width>7.20467in</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Color>Red</Color>
@@ -2488,6 +2396,69 @@
           </Border>
         </Style>
       </Line>
+      <Textbox Name="Textbox31">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Amount in words</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox31</rd:DefaultName>
+        <Top>5.7257in</Top>
+        <Height>0.25in</Height>
+        <Width>1.82789in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.RupeesToWord(Sum(Fields!GrandTotal.Value, "rpt_gsinvoice"))</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> only</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox31</rd:DefaultName>
+        <Top>5.7257in</Top>
+        <Left>1.84178in</Left>
+        <Height>0.25in</Height>
+        <Width>5.38246in</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>8.25in</Height>
     <Style>
@@ -2846,6 +2817,211 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <Code>Function RupeesToWord(ByVal MyNumber)
+Dim Temp
+Dim Rupees, Paisa As String
+Dim DecimalPlace, iCount
+Dim Hundreds, Words As String
+Dim place(9) As String
+place(0) = " Thousand "
+place(2) = " Lakh "
+place(4) = " Crore "
+place(6) = " Arab "
+place(8) = " Kharab "
+On Error Resume Next
+' Convert MyNumber to a string, trimming extra spaces.
+MyNumber = Trim(Str(MyNumber))
+
+' Find decimal place.
+DecimalPlace = InStr(MyNumber, ".")
+
+' If we find decimal place...
+If DecimalPlace &gt; 0 Then
+' Convert Paisa
+Temp = Left(Mid(MyNumber, DecimalPlace + 1) &amp; "00", 2)
+'Paisa = " and " &amp; ConvertTens(Temp) &amp; " Paisa"
+Paisa = ""
+
+' Strip off paisa from remainder to convert.
+MyNumber = Trim(Left(MyNumber, DecimalPlace - 1))
+End If
+
+'===============================================================
+Dim TM As String ' If MyNumber between Rs.1 To 99 Only.
+TM = Right(MyNumber, 2)
+
+If Len(MyNumber) &gt; 0 And Len(MyNumber) &lt;= 2 Then
+If Len(TM) = 1 Then
+Words = ConvertDigit(TM)
+RupeesToWord = "Rupees " &amp; Words &amp; Paisa &amp; " Only"
+
+Exit Function
+
+Else
+If Len(TM) = 2 Then
+Words = ConvertTens(TM)
+RupeesToWord = "Rupees " &amp; Words &amp; Paisa &amp; " Only"
+Exit Function
+
+End If
+End If
+End If
+'===============================================================
+
+
+' Convert last 3 digits of MyNumber to ruppees in word.
+Hundreds = ConvertHundreds(Right(MyNumber, 3))
+' Strip off last three digits
+MyNumber = Left(MyNumber, Len(MyNumber) - 3)
+
+iCount = 0
+Do While MyNumber &lt;&gt; ""
+'Strip last two digits
+Temp = Right(MyNumber, 2)
+If Len(MyNumber) = 1 Then
+
+
+If Trim(Words) = "Thousand" Or _
+Trim(Words) = "Lakh Thousand" Or _
+Trim(Words) = "Lakh" Or _
+Trim(Words) = "Crore" Or _
+Trim(Words) = "Crore Lakh Thousand" Or _
+Trim(Words) = "Arab Crore Lakh Thousand" Or _
+Trim(Words) = "Arab" Or _
+Trim(Words) = "Kharab Arab Crore Lakh Thousand" Or _
+Trim(Words) = "Kharab" Then
+
+Words = ConvertDigit(Temp) &amp; place(iCount)
+MyNumber = Left(MyNumber, Len(MyNumber) - 1)
+
+Else
+
+Words = ConvertDigit(Temp) &amp; place(iCount) &amp; Words
+MyNumber = Left(MyNumber, Len(MyNumber) - 1)
+
+End If
+Else
+
+If Trim(Words) = "Thousand" Or _
+Trim(Words) = "Lakh Thousand" Or _
+Trim(Words) = "Lakh" Or _
+Trim(Words) = "Crore" Or _
+Trim(Words) = "Crore Lakh Thousand" Or _
+Trim(Words) = "Arab Crore Lakh Thousand" Or _
+Trim(Words) = "Arab" Then
+
+
+Words = ConvertTens(Temp) &amp; place(iCount)
+
+
+MyNumber = Left(MyNumber, Len(MyNumber) - 2)
+Else
+
+'=================================================================
+' if only Lakh, Crore, Arab, Kharab
+
+If Trim(ConvertTens(Temp) &amp; place(iCount)) = "Lakh" Or _
+Trim(ConvertTens(Temp) &amp; place(iCount)) = "Crore" Or _
+Trim(ConvertTens(Temp) &amp; place(iCount)) = "Arab" Then
+
+Words = Words
+MyNumber = Left(MyNumber, Len(MyNumber) - 2)
+Else
+Words = ConvertTens(Temp) &amp; place(iCount) &amp; Words
+MyNumber = Left(MyNumber, Len(MyNumber) - 2)
+End If
+
+End If
+End If
+
+iCount = iCount + 2
+Loop
+
+RupeesToWord = "Rupees " &amp; Words &amp; Hundreds &amp; Paisa &amp; " Only"
+End Function
+
+' Conversion for hundreds
+'*****************************************
+Private Function ConvertHundreds(ByVal MyNumber)
+Dim Result As String
+
+' Exit if there is nothing to convert.
+If Val(MyNumber) = 0 Then Exit Function
+
+' Append leading zeros to number.
+MyNumber = Right("000" &amp; MyNumber, 3)
+
+' Do we have a hundreds place digit to convert?
+If Left(MyNumber, 1) &lt;&gt; "0" Then
+Result = ConvertDigit(Left(MyNumber, 1)) &amp; " Hundreds "
+End If
+
+' Do we have a tens place digit to convert?
+If Mid(MyNumber, 2, 1) &lt;&gt; "0" Then
+Result = Result &amp; ConvertTens(Mid(MyNumber, 2))
+Else
+' If not, then convert the ones place digit.
+Result = Result &amp; ConvertDigit(Mid(MyNumber, 3))
+End If
+
+ConvertHundreds = Trim(Result)
+End Function
+
+' Conversion for tens
+'*****************************************
+Private Function ConvertTens(ByVal MyTens)
+Dim Result As String
+
+' Is value between 10 and 19?
+If Val(Left(MyTens, 1)) = 1 Then
+Select Case Val(MyTens)
+Case 10 : Result = "Ten"
+Case 11 : Result = "Eleven"
+Case 12 : Result = "Twelve"
+Case 13 : Result = "Thirteen"
+Case 14 : Result = "Fourteen"
+Case 15 : Result = "Fifteen"
+Case 16 : Result = "Sixteen"
+Case 17 : Result = "Seventeen"
+Case 18 : Result = "Eighteen"
+Case 19 : Result = "Nineteen"
+Case Else
+End Select
+Else
+' .. otherwise it's between 20 and 99.
+Select Case Val(Left(MyTens, 1))
+Case 2 : Result = "Twenty "
+Case 3 : Result = "Thirty "
+Case 4 : Result = "Forty "
+Case 5 : Result = "Fifty "
+Case 6 : Result = "Sixty "
+Case 7 : Result = "Seventy "
+Case 8 : Result = "Eighty "
+Case 9 : Result = "Ninety "
+Case Else
+End Select
+
+' Convert ones place digit.
+Result = Result &amp; ConvertDigit(Right(MyTens, 1))
+End If
+
+ConvertTens = Result
+End Function
+
+Private Function ConvertDigit(ByVal MyDigit)
+Select Case Val(MyDigit)
+Case 1 : ConvertDigit = "One"
+Case 2 : ConvertDigit = "Two"
+Case 3 : ConvertDigit = "Three"
+Case 4 : ConvertDigit = "Four"
+Case 5 : ConvertDigit = "Five"
+Case 6 : ConvertDigit = "Six"
+Case 7 : ConvertDigit = "Seven"
+Case 8 : ConvertDigit = "Eight"
+Case 9 : ConvertDigit = "Nine"
+Case Else : ConvertDigit = ""
+End Select
+End Function</Code>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>a03dba50-0ffa-4f6a-b0db-0a540ae96d1b</rd:ReportID>
 </Report>

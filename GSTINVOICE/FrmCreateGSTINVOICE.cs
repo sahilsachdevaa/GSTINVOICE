@@ -225,14 +225,14 @@ namespace GSTINVOICE
 
         {
             OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
-            OleDbDataAdapter da = new OleDbDataAdapter("Select CustomerName from Customertbl ", conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select CustomerName, CustomerGSTIN from Customertbl ", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             AutoCompleteStringCollection str = new AutoCompleteStringCollection();
 
             for (int i = 0; i < dt.Rows.Count; i++)
 
-                str.Add(dt.Rows[i][0].ToString());
+                str.Add(dt.Rows[i][0].ToString() + " : " + dt.Rows[i][1].ToString());
 
             return str;
 
@@ -325,7 +325,9 @@ namespace GSTINVOICE
             OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
             string sql = null;
             DateTime date = Convert.ToDateTime(txtinvoicedate.Text);
-            OleDbDataAdapter da = new OleDbDataAdapter("Select ID from Customertbl where CustomerName ='" + txtCustomer.Text+"'", conn);
+            var obj = txtCustomer.Text.Split();
+
+            OleDbDataAdapter da = new OleDbDataAdapter("Select ID from Customertbl where CustomerGSTIN ='" + obj[2]+ "'", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             int getid =Convert.ToInt16(dt.Rows[0][0]);
