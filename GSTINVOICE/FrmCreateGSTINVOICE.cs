@@ -389,21 +389,7 @@ namespace GSTINVOICE
 
         private void txtCustomer_Leave(object sender, EventArgs e)
         {
-            try
-            {
-                OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
-                OleDbDataAdapter da = new OleDbDataAdapter("Select ID from Customertbl where CustomerName ='" + txtCustomer.Text + "'", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                int getid = Convert.ToInt16(dt.Rows[0][0]);
-            }
-            catch (Exception)
-            {
-                
-                MessageBox.Show("User not Found..!!");
-                txtCustomer.Focus();
-            }
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
