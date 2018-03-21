@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gSTDataSet2 = new GSTINVOICE.GSTDataSet2();
             this.hSNCodetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gSTDataSet2 = new GSTINVOICE.GSTDataSet2();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.hSNCodetblTableAdapter = new GSTINVOICE.GSTDataSet2TableAdapters.HSNCodetblTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gSTDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hSNCodetblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gSTDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -52,8 +52,9 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.hSNCodetblBindingSource;
-            this.comboBox1.DisplayMember = "Description";
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.hSNCodetblBindingSource, "ID", true));
+            this.comboBox1.DataSource = this.gSTDataSet2;
+            this.comboBox1.DisplayMember = "HSNCodetbl.Description";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(26, 90);
             this.comboBox1.Name = "comboBox1";
@@ -62,26 +63,27 @@
             this.comboBox1.ValueMember = "ID";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // hSNCodetblBindingSource
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 179);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(753, 150);
-            this.dataGridView1.TabIndex = 2;
+            this.hSNCodetblBindingSource.DataMember = "HSNCodetbl";
+            this.hSNCodetblBindingSource.DataSource = this.gSTDataSet2;
             // 
             // gSTDataSet2
             // 
             this.gSTDataSet2.DataSetName = "GSTDataSet2";
             this.gSTDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // hSNCodetblBindingSource
+            // dataGridView1
             // 
-            this.hSNCodetblBindingSource.DataMember = "HSNCodetbl";
-            this.hSNCodetblBindingSource.DataSource = this.gSTDataSet2;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.Location = new System.Drawing.Point(26, 179);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(753, 146);
+            this.dataGridView1.TabIndex = 2;
             // 
             // hSNCodetblTableAdapter
             // 
@@ -99,9 +101,9 @@
             this.Name = "SelectCategory";
             this.Text = "SelectCategory";
             this.Load += new System.EventHandler(this.SelectCategory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gSTDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hSNCodetblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gSTDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

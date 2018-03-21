@@ -33,23 +33,53 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DS_Contractor = new GSTINVOICE.DS_Contractor();
             this.ContractortblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ContractortblTableAdapter = new GSTINVOICE.DS_ContractorTableAdapters.ContractortblTableAdapter();
-            this.CommonDs = new GSTINVOICE.CommonDs();
+            this.DS_Contractor = new GSTINVOICE.DS_Contractor();
             this.CustomertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CustomertblTableAdapter = new GSTINVOICE.CommonDsTableAdapters.CustomertblTableAdapter();
+            this.CommonDs = new GSTINVOICE.CommonDs();
             this.GstTransactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.HSNCodetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ContractortblTableAdapter = new GSTINVOICE.DS_ContractorTableAdapters.ContractortblTableAdapter();
+            this.CustomertblTableAdapter = new GSTINVOICE.CommonDsTableAdapters.CustomertblTableAdapter();
             this.HSNCodetblTableAdapter = new GSTINVOICE.CommonDsTableAdapters.HSNCodetblTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DS_Contractor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContractortblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CommonDs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS_Contractor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomertblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CommonDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GstTransactionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HSNCodetblBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ContractortblBindingSource
+            // 
+            this.ContractortblBindingSource.DataMember = "Contractortbl";
+            this.ContractortblBindingSource.DataSource = this.DS_Contractor;
+            // 
+            // DS_Contractor
+            // 
+            this.DS_Contractor.DataSetName = "DS_Contractor";
+            this.DS_Contractor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // CustomertblBindingSource
+            // 
+            this.CustomertblBindingSource.DataMember = "Customertbl";
+            this.CustomertblBindingSource.DataSource = this.CommonDs;
+            // 
+            // CommonDs
+            // 
+            this.CommonDs.DataSetName = "CommonDs";
+            this.CommonDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // GstTransactionsBindingSource
+            // 
+            this.GstTransactionsBindingSource.DataMember = "GstTransactions";
+            this.GstTransactionsBindingSource.DataSource = this.CommonDs;
+            // 
+            // HSNCodetblBindingSource
+            // 
+            this.HSNCodetblBindingSource.DataMember = "HSNCodetbl";
+            this.HSNCodetblBindingSource.DataSource = this.CommonDs;
             // 
             // reportViewer1
             // 
@@ -71,47 +101,15 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(1237, 510);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // DS_Contractor
-            // 
-            this.DS_Contractor.DataSetName = "DS_Contractor";
-            this.DS_Contractor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ContractortblBindingSource
-            // 
-            this.ContractortblBindingSource.DataMember = "Contractortbl";
-            this.ContractortblBindingSource.DataSource = this.DS_Contractor;
+            this.reportViewer1.PrintingBegin += new Microsoft.Reporting.WinForms.ReportPrintEventHandler(this.reportViewer1_PrintingBegin);
             // 
             // ContractortblTableAdapter
             // 
             this.ContractortblTableAdapter.ClearBeforeFill = true;
             // 
-            // CommonDs
-            // 
-            this.CommonDs.DataSetName = "CommonDs";
-            this.CommonDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // CustomertblBindingSource
-            // 
-            this.CustomertblBindingSource.DataMember = "Customertbl";
-            this.CustomertblBindingSource.DataSource = this.CommonDs;
-            // 
             // CustomertblTableAdapter
             // 
             this.CustomertblTableAdapter.ClearBeforeFill = true;
-            // 
-            // GstTransactionsBindingSource
-            // 
-            this.GstTransactionsBindingSource.DataMember = "GstTransactions";
-            this.GstTransactionsBindingSource.DataSource = this.CommonDs;
-            // 
-            // GstTransactionsTableAdapter
-            // 
-            // 
-            // HSNCodetblBindingSource
-            // 
-            this.HSNCodetblBindingSource.DataMember = "HSNCodetbl";
-            this.HSNCodetblBindingSource.DataSource = this.CommonDs;
             // 
             // HSNCodetblTableAdapter
             // 
@@ -127,10 +125,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "PrintGstInvoice";
             this.Load += new System.EventHandler(this.PrintGstInvoice_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DS_Contractor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContractortblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CommonDs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS_Contractor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomertblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CommonDs)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.GstTransactionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HSNCodetblBindingSource)).EndInit();
             this.ResumeLayout(false);
 

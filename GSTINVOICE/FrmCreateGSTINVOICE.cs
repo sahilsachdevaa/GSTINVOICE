@@ -263,6 +263,7 @@ namespace GSTINVOICE
                 SaveGridData();
                 MessageBox.Show("Record Saved Succesfully");
                 this.btnSave.Enabled = false;
+                this.button2.Visible = true;
             }
             catch (Exception ex) 
             {
@@ -383,25 +384,22 @@ namespace GSTINVOICE
             txtCustomer.Focus();
             txttotalinvoice.Clear();
             btnSave.Enabled = true;
+            button2.Visible = false;
         }
 
         private void txtCustomer_Leave(object sender, EventArgs e)
         {
-            try
-            {
-                OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
-                OleDbDataAdapter da = new OleDbDataAdapter("Select ID from Customertbl where CustomerName ='" + txtCustomer.Text + "'", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                int getid = Convert.ToInt16(dt.Rows[0][0]);
-            }
-            catch (Exception)
-            {
-                
-                MessageBox.Show("User not Found..!!");
-                txtCustomer.Focus();
-            }
-            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new PrintGstInvoice(txtInvoice.Text, isGstForm).Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

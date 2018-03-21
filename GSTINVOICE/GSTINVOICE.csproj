@@ -167,6 +167,7 @@
     <EmbeddedResource Include="AddCustomerFrm.resx">
       <DependentUpon>AddCustomerFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BOSINVOICErpt.rdlc" />
     <EmbeddedResource Include="FrmCreateGSTINVOICE.resx">
       <DependentUpon>FrmCreateGSTINVOICE.cs</DependentUpon>
     </EmbeddedResource>

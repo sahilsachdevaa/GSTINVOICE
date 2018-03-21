@@ -33,7 +33,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>GST Invoice</Value>
+                <Value>Bill of Supply</Value>
                 <Style>
                   <FontSize>16pt</FontSize>
                   <FontWeight>ExtraBold</FontWeight>
@@ -1748,8 +1748,8 @@
         <DataSetName>rpt_GstTrans</DataSetName>
         <Top>2.53819in</Top>
         <Left>0.01958in</Left>
-        <Height>1.14584in</Height>
-        <Width>7.20466in</Width>
+        <Height>1.14583in</Height>
+        <Width>7.20467in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -1793,6 +1793,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox32</rd:DefaultName>
             <Top>0.34028in</Top>
+            <Left>0in</Left>
             <Height>1.17361in</Height>
             <Width>3.5in</Width>
             <Style>
@@ -1822,6 +1823,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox31</rd:DefaultName>
+            <Left>0in</Left>
             <Height>0.27083in</Height>
             <Width>3.65625in</Width>
             <ZIndex>1</ZIndex>
@@ -2524,9 +2526,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
           <Top>0.14458in</Top>
-          <Left>0.01958in</Left>
+          <Left>0.91542in</Left>
           <Height>0.5in</Height>
-          <Width>7.20466in</Width>
+          <Width>4.38542in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -2558,9 +2560,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
           <Top>0.71403in</Top>
-          <Left>0.01958in</Left>
+          <Left>0.79042in</Left>
           <Height>0.25in</Height>
-          <Width>7.20466in</Width>
+          <Width>5.22917in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -2597,8 +2599,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>1.12721in</Top>
-          <Left>2.22791in</Left>
+          <Top>1.11333in</Top>
+          <Left>1.70708in</Left>
           <Height>0.31945in</Height>
           <Width>2.71875in</Width>
           <ZIndex>2</ZIndex>

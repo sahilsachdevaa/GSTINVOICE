@@ -495,7 +495,8 @@
               <DbSource ConnectionRef="GSTConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST
+                    <CommandText>SELECT        GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST, 
+                         GstTransactions.TCGST, GstTransactions.TSGST
 FROM            (GstTransactions INNER JOIN
                          HSNCodetbl ON GstTransactions.CategoryId = HSNCodetbl.ID)</CommandText>
                     <Parameters />
@@ -513,6 +514,8 @@ FROM            (GstTransactions INNER JOIN
               <Mapping SourceColumn="GST" DataSetColumn="GST" />
               <Mapping SourceColumn="CGST" DataSetColumn="CGST" />
               <Mapping SourceColumn="SGST" DataSetColumn="SGST" />
+              <Mapping SourceColumn="TCGST" DataSetColumn="TCGST" />
+              <Mapping SourceColumn="TSGST" DataSetColumn="TSGST" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -524,7 +527,7 @@ FROM            (GstTransactions INNER JOIN
   <xs:element name="CommonDs" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CommonDs" msprop:Generator_UserDSName="CommonDs">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BOSInvoicetbL" msprop:Generator_TableClassName="BOSInvoicetbLDataTable" msprop:Generator_TableVarName="tableBOSInvoicetbL" msprop:Generator_TablePropName="BOSInvoicetbL" msprop:Generator_RowDeletingName="BOSInvoicetbLRowDeleting" msprop:Generator_RowChangingName="BOSInvoicetbLRowChanging" msprop:Generator_RowEvHandlerName="BOSInvoicetbLRowChangeEventHandler" msprop:Generator_RowDeletedName="BOSInvoicetbLRowDeleted" msprop:Generator_UserTableName="BOSInvoicetbL" msprop:Generator_RowChangedName="BOSInvoicetbLRowChanged" msprop:Generator_RowEvArgName="BOSInvoicetbLRowChangeEvent" msprop:Generator_RowClassName="BOSInvoicetbLRow">
+        <xs:element name="BOSInvoicetbL" msprop:Generator_TableClassName="BOSInvoicetbLDataTable" msprop:Generator_TableVarName="tableBOSInvoicetbL" msprop:Generator_RowChangedName="BOSInvoicetbLRowChanged" msprop:Generator_TablePropName="BOSInvoicetbL" msprop:Generator_RowDeletingName="BOSInvoicetbLRowDeleting" msprop:Generator_RowChangingName="BOSInvoicetbLRowChanging" msprop:Generator_RowEvHandlerName="BOSInvoicetbLRowChangeEventHandler" msprop:Generator_RowDeletedName="BOSInvoicetbLRowDeleted" msprop:Generator_RowClassName="BOSInvoicetbLRow" msprop:Generator_UserTableName="BOSInvoicetbL" msprop:Generator_RowEvArgName="BOSInvoicetbLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -546,7 +549,7 @@ FROM            (GstTransactions INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BOSTransactions" msprop:Generator_TableClassName="BOSTransactionsDataTable" msprop:Generator_TableVarName="tableBOSTransactions" msprop:Generator_TablePropName="BOSTransactions" msprop:Generator_RowDeletingName="BOSTransactionsRowDeleting" msprop:Generator_RowChangingName="BOSTransactionsRowChanging" msprop:Generator_RowEvHandlerName="BOSTransactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="BOSTransactionsRowDeleted" msprop:Generator_UserTableName="BOSTransactions" msprop:Generator_RowChangedName="BOSTransactionsRowChanged" msprop:Generator_RowEvArgName="BOSTransactionsRowChangeEvent" msprop:Generator_RowClassName="BOSTransactionsRow">
+        <xs:element name="BOSTransactions" msprop:Generator_TableClassName="BOSTransactionsDataTable" msprop:Generator_TableVarName="tableBOSTransactions" msprop:Generator_RowChangedName="BOSTransactionsRowChanged" msprop:Generator_TablePropName="BOSTransactions" msprop:Generator_RowDeletingName="BOSTransactionsRowDeleting" msprop:Generator_RowChangingName="BOSTransactionsRowChanging" msprop:Generator_RowEvHandlerName="BOSTransactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="BOSTransactionsRowDeleted" msprop:Generator_RowClassName="BOSTransactionsRow" msprop:Generator_UserTableName="BOSTransactions" msprop:Generator_RowEvArgName="BOSTransactionsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -572,7 +575,7 @@ FROM            (GstTransactions INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Contractortbl" msprop:Generator_TableClassName="ContractortblDataTable" msprop:Generator_TableVarName="tableContractortbl" msprop:Generator_TablePropName="Contractortbl" msprop:Generator_RowDeletingName="ContractortblRowDeleting" msprop:Generator_RowChangingName="ContractortblRowChanging" msprop:Generator_RowEvHandlerName="ContractortblRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractortblRowDeleted" msprop:Generator_UserTableName="Contractortbl" msprop:Generator_RowChangedName="ContractortblRowChanged" msprop:Generator_RowEvArgName="ContractortblRowChangeEvent" msprop:Generator_RowClassName="ContractortblRow">
+        <xs:element name="Contractortbl" msprop:Generator_TableClassName="ContractortblDataTable" msprop:Generator_TableVarName="tableContractortbl" msprop:Generator_RowChangedName="ContractortblRowChanged" msprop:Generator_TablePropName="Contractortbl" msprop:Generator_RowDeletingName="ContractortblRowDeleting" msprop:Generator_RowChangingName="ContractortblRowChanging" msprop:Generator_RowEvHandlerName="ContractortblRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractortblRowDeleted" msprop:Generator_RowClassName="ContractortblRow" msprop:Generator_UserTableName="Contractortbl" msprop:Generator_RowEvArgName="ContractortblRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ContractorName" msprop:Generator_ColumnVarNameInTable="columnContractorName" msprop:Generator_ColumnPropNameInRow="ContractorName" msprop:Generator_ColumnPropNameInTable="ContractorNameColumn" msprop:Generator_UserColumnName="ContractorName" minOccurs="0">
@@ -627,7 +630,7 @@ FROM            (GstTransactions INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Customertbl" msprop:Generator_TableClassName="CustomertblDataTable" msprop:Generator_TableVarName="tableCustomertbl" msprop:Generator_TablePropName="Customertbl" msprop:Generator_RowDeletingName="CustomertblRowDeleting" msprop:Generator_RowChangingName="CustomertblRowChanging" msprop:Generator_RowEvHandlerName="CustomertblRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomertblRowDeleted" msprop:Generator_UserTableName="Customertbl" msprop:Generator_RowChangedName="CustomertblRowChanged" msprop:Generator_RowEvArgName="CustomertblRowChangeEvent" msprop:Generator_RowClassName="CustomertblRow">
+        <xs:element name="Customertbl" msprop:Generator_TableClassName="CustomertblDataTable" msprop:Generator_TableVarName="tableCustomertbl" msprop:Generator_RowChangedName="CustomertblRowChanged" msprop:Generator_TablePropName="Customertbl" msprop:Generator_RowDeletingName="CustomertblRowDeleting" msprop:Generator_RowChangingName="CustomertblRowChanging" msprop:Generator_RowEvHandlerName="CustomertblRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomertblRowDeleted" msprop:Generator_RowClassName="CustomertblRow" msprop:Generator_UserTableName="Customertbl" msprop:Generator_RowEvArgName="CustomertblRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -669,7 +672,7 @@ FROM            (GstTransactions INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GSTInvoicetbl" msprop:Generator_TableClassName="GSTInvoicetblDataTable" msprop:Generator_TableVarName="tableGSTInvoicetbl" msprop:Generator_TablePropName="GSTInvoicetbl" msprop:Generator_RowDeletingName="GSTInvoicetblRowDeleting" msprop:Generator_RowChangingName="GSTInvoicetblRowChanging" msprop:Generator_RowEvHandlerName="GSTInvoicetblRowChangeEventHandler" msprop:Generator_RowDeletedName="GSTInvoicetblRowDeleted" msprop:Generator_UserTableName="GSTInvoicetbl" msprop:Generator_RowChangedName="GSTInvoicetblRowChanged" msprop:Generator_RowEvArgName="GSTInvoicetblRowChangeEvent" msprop:Generator_RowClassName="GSTInvoicetblRow">
+        <xs:element name="GSTInvoicetbl" msprop:Generator_TableClassName="GSTInvoicetblDataTable" msprop:Generator_TableVarName="tableGSTInvoicetbl" msprop:Generator_RowChangedName="GSTInvoicetblRowChanged" msprop:Generator_TablePropName="GSTInvoicetbl" msprop:Generator_RowDeletingName="GSTInvoicetblRowDeleting" msprop:Generator_RowChangingName="GSTInvoicetblRowChanging" msprop:Generator_RowEvHandlerName="GSTInvoicetblRowChangeEventHandler" msprop:Generator_RowDeletedName="GSTInvoicetblRowDeleted" msprop:Generator_RowClassName="GSTInvoicetblRow" msprop:Generator_UserTableName="GSTInvoicetbl" msprop:Generator_RowEvArgName="GSTInvoicetblRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -691,7 +694,7 @@ FROM            (GstTransactions INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HSNCodetbl" msprop:Generator_TableClassName="HSNCodetblDataTable" msprop:Generator_TableVarName="tableHSNCodetbl" msprop:Generator_TablePropName="HSNCodetbl" msprop:Generator_RowDeletingName="HSNCodetblRowDeleting" msprop:Generator_RowChangingName="HSNCodetblRowChanging" msprop:Generator_RowEvHandlerName="HSNCodetblRowChangeEventHandler" msprop:Generator_RowDeletedName="HSNCodetblRowDeleted" msprop:Generator_UserTableName="HSNCodetbl" msprop:Generator_RowChangedName="HSNCodetblRowChanged" msprop:Generator_RowEvArgName="HSNCodetblRowChangeEvent" msprop:Generator_RowClassName="HSNCodetblRow">
+        <xs:element name="HSNCodetbl" msprop:Generator_TableClassName="HSNCodetblDataTable" msprop:Generator_TableVarName="tableHSNCodetbl" msprop:Generator_RowChangedName="HSNCodetblRowChanged" msprop:Generator_TablePropName="HSNCodetbl" msprop:Generator_RowDeletingName="HSNCodetblRowDeleting" msprop:Generator_RowChangingName="HSNCodetblRowChanging" msprop:Generator_RowEvHandlerName="HSNCodetblRowChangeEventHandler" msprop:Generator_RowDeletedName="HSNCodetblRowDeleted" msprop:Generator_RowClassName="HSNCodetblRow" msprop:Generator_UserTableName="HSNCodetbl" msprop:Generator_RowEvArgName="HSNCodetblRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -722,7 +725,7 @@ FROM            (GstTransactions INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GstTranscatjoin" msprop:Generator_TableClassName="GstTranscatjoinDataTable" msprop:Generator_TableVarName="tableGstTranscatjoin" msprop:Generator_RowChangedName="GstTranscatjoinRowChanged" msprop:Generator_TablePropName="GstTranscatjoin" msprop:Generator_RowDeletingName="GstTranscatjoinRowDeleting" msprop:Generator_RowChangingName="GstTranscatjoinRowChanging" msprop:Generator_RowEvHandlerName="GstTranscatjoinRowChangeEventHandler" msprop:Generator_RowDeletedName="GstTranscatjoinRowDeleted" msprop:Generator_RowClassName="GstTranscatjoinRow" msprop:Generator_UserTableName="GstTranscatjoin" msprop:Generator_RowEvArgName="GstTranscatjoinRowChangeEvent">
+        <xs:element name="GstTranscatjoin" msprop:Generator_TableClassName="GstTranscatjoinDataTable" msprop:Generator_TableVarName="tableGstTranscatjoin" msprop:Generator_TablePropName="GstTranscatjoin" msprop:Generator_RowDeletingName="GstTranscatjoinRowDeleting" msprop:Generator_RowChangingName="GstTranscatjoinRowChanging" msprop:Generator_RowEvHandlerName="GstTranscatjoinRowChangeEventHandler" msprop:Generator_RowDeletedName="GstTranscatjoinRowDeleted" msprop:Generator_UserTableName="GstTranscatjoin" msprop:Generator_RowChangedName="GstTranscatjoinRowChanged" msprop:Generator_RowEvArgName="GstTranscatjoinRowChangeEvent" msprop:Generator_RowClassName="GstTranscatjoinRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GoodsDetail" msprop:Generator_ColumnVarNameInTable="columnGoodsDetail" msprop:Generator_ColumnPropNameInRow="GoodsDetail" msprop:Generator_ColumnPropNameInTable="GoodsDetailColumn" msprop:Generator_UserColumnName="GoodsDetail" minOccurs="0">
@@ -746,6 +749,8 @@ FROM            (GstTransactions INNER JOIN
               <xs:element name="GST" msprop:Generator_ColumnVarNameInTable="columnGST" msprop:Generator_ColumnPropNameInRow="GST" msprop:Generator_ColumnPropNameInTable="GSTColumn" msprop:Generator_UserColumnName="GST" type="xs:double" minOccurs="0" />
               <xs:element name="CGST" msprop:Generator_ColumnVarNameInTable="columnCGST" msprop:Generator_ColumnPropNameInRow="CGST" msprop:Generator_ColumnPropNameInTable="CGSTColumn" msprop:Generator_UserColumnName="CGST" type="xs:double" minOccurs="0" />
               <xs:element name="SGST" msprop:Generator_ColumnVarNameInTable="columnSGST" msprop:Generator_ColumnPropNameInRow="SGST" msprop:Generator_ColumnPropNameInTable="SGSTColumn" msprop:Generator_UserColumnName="SGST" type="xs:double" minOccurs="0" />
+              <xs:element name="TCGST" msprop:Generator_ColumnVarNameInTable="columnTCGST" msprop:Generator_ColumnPropNameInRow="TCGST" msprop:Generator_ColumnPropNameInTable="TCGSTColumn" msprop:Generator_UserColumnName="TCGST" type="xs:double" minOccurs="0" />
+              <xs:element name="TSGST" msprop:Generator_ColumnVarNameInTable="columnTSGST" msprop:Generator_ColumnPropNameInRow="TSGST" msprop:Generator_ColumnPropNameInTable="TSGSTColumn" msprop:Generator_UserColumnName="TSGST" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

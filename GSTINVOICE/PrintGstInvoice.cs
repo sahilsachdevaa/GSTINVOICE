@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,22 +16,46 @@ namespace GSTINVOICE
 {
     public partial class PrintGstInvoice : Form
     {
-        public PrintGstInvoice()
+        string invoiceid;
+        bool IsGstForm;
+        public PrintGstInvoice(string invoiceid, bool isGstform = true)
         {
+            this.IsGstForm = isGstform;
+            this.invoiceid = invoiceid;
             InitializeComponent();
         }
 
         private void PrintGstInvoice_Load(object sender, EventArgs e)
         {
-            DataSet contds = new DataSet();
-            contds = GetContracterDataset("IN00001");
-            DataSet custds = new DataSet();
-            custds = GetCustomerDataset(4);
-            DataSet gstransds = new DataSet();
-            gstransds = GetGSTranDataset("IN00001");
-            DataSet gsinvoiceds = new DataSet();
-            gsinvoiceds = GetGSInvDataset("IN00001");
+            this.reportViewer1.RefreshReport();
+            reportViewer1.Visible = true;
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            var asem = Assembly.GetExecutingAssembly().Location;
+            var path = Path.GetDirectoryName(asem);
+            if (this.IsGstForm)
+            this.reportViewer1.LocalReport.ReportPath = path + "\\GSTINVOICErpt.rdlc";
+            else
+            this.reportViewer1.LocalReport.ReportPath = path + "\\BOSINVOICErpt.rdlc";
 
+            DataSet contds = new DataSet();
+            contds = GetContracterDataset(invoiceid);
+
+            DataSet gstransds = new DataSet();
+            gstransds = GetGSTranDataset(invoiceid);
+
+            DataSet gsinvoiceds = new DataSet();
+            gsinvoiceds = GetGSInvDataset(invoiceid);
+
+            int id = 0;
+            var custid = gsinvoiceds.Tables[0].Rows[0][2];
+            if (custid != null)
+            {
+                id = Convert.ToInt32(custid);
+            }
+
+            DataSet custds = new DataSet();
+            custds = GetCustomerDataset(id);
+            
             if (contds.Tables[0].Rows.Count > 0)
             {
                 ReportDataSource rdscont = new ReportDataSource("rpt_Contactor", contds.Tables[0]);
@@ -56,7 +82,7 @@ namespace GSTINVOICE
             {
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("Select * from GSTInvoicetbl where invoiceno='"+p+"'", con);
+                    OleDbCommand cmd = new OleDbCommand("Select * from " + (IsGstForm ? "GSTInvoicetbl" : "BOSInvoicetbl") + " where invoiceno='" + p + "'", con);
                     OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
@@ -72,11 +98,21 @@ namespace GSTINVOICE
 
         private DataSet GetGSTranDataset(string p)
         {
+            string query = string.Empty;
+            if (this.IsGstForm)
+            {
+                query = "SELECT GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST, GstTransactions.TCGST, GstTransactions.TSGST FROM (GstTransactions INNER JOIN HSNCodetbl ON GstTransactions.CategoryId = HSNCodetbl.ID) where GstTransactions.invoiceID ='" + p + "'";
+            }
+            else
+            {
+                query = "SELECT BOSTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, BOSTransactions.Qty, BOSTransactions.TotalSale, BOSTransactions.TaxableValue, BOSTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST, BOSTransactions.TCGST, BOSTransactions.TSGST FROM (BOSTransactions INNER JOIN HSNCodetbl ON BOSTransactions.CategoryId = HSNCodetbl.ID) where BOSTransactions.invoiceID ='" + p + "'";
+            }
+
             try
             {
                 using (var con = new OleDbConnection(HelperClass.ConString))
                 {
-                    OleDbCommand cmd = new OleDbCommand("SELECT GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST FROM (GstTransactions INNER JOIN HSNCodetbl ON GstTransactions.CategoryId = HSNCodetbl.ID) where GstTransactions.invoiceID ='" + p + "'", con);
+                    OleDbCommand cmd = new OleDbCommand(query, con);
                     OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
@@ -128,6 +164,11 @@ namespace GSTINVOICE
 
                 throw;
             }
+        }
+
+        private void reportViewer1_PrintingBegin(object sender, ReportPrintEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -2666,6 +2666,10 @@ namespace GSTINVOICE {
             
             private global::System.Data.DataColumn columnSGST;
             
+            private global::System.Data.DataColumn columnTCGST;
+            
+            private global::System.Data.DataColumn columnTSGST;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GstTranscatjoinDataTable() {
@@ -2773,6 +2777,22 @@ namespace GSTINVOICE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TCGSTColumn {
+                get {
+                    return this.columnTCGST;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TSGSTColumn {
+                get {
+                    return this.columnTSGST;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2808,7 +2828,7 @@ namespace GSTINVOICE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GstTranscatjoinRow AddGstTranscatjoinRow(string GoodsDetail, string HSN_SAC, int Qty, double TotalSale, double TaxableValue, double discount, double GST, double CGST, double SGST) {
+            public GstTranscatjoinRow AddGstTranscatjoinRow(string GoodsDetail, string HSN_SAC, int Qty, double TotalSale, double TaxableValue, double discount, double GST, double CGST, double SGST, double TCGST, double TSGST) {
                 GstTranscatjoinRow rowGstTranscatjoinRow = ((GstTranscatjoinRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         GoodsDetail,
@@ -2819,7 +2839,9 @@ namespace GSTINVOICE {
                         discount,
                         GST,
                         CGST,
-                        SGST};
+                        SGST,
+                        TCGST,
+                        TSGST};
                 rowGstTranscatjoinRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGstTranscatjoinRow);
                 return rowGstTranscatjoinRow;
@@ -2851,6 +2873,8 @@ namespace GSTINVOICE {
                 this.columnGST = base.Columns["GST"];
                 this.columnCGST = base.Columns["CGST"];
                 this.columnSGST = base.Columns["SGST"];
+                this.columnTCGST = base.Columns["TCGST"];
+                this.columnTSGST = base.Columns["TSGST"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2874,6 +2898,10 @@ namespace GSTINVOICE {
                 base.Columns.Add(this.columnCGST);
                 this.columnSGST = new global::System.Data.DataColumn("SGST", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSGST);
+                this.columnTCGST = new global::System.Data.DataColumn("TCGST", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTCGST);
+                this.columnTSGST = new global::System.Data.DataColumn("TSGST", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTSGST);
                 this.columnGoodsDetail.MaxLength = 255;
                 this.columnHSN_SAC.MaxLength = 255;
             }
@@ -4511,6 +4539,38 @@ namespace GSTINVOICE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TCGST {
+                get {
+                    try {
+                        return ((double)(this[this.tableGstTranscatjoin.TCGSTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TCGST\' in table \'GstTranscatjoin\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGstTranscatjoin.TCGSTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TSGST {
+                get {
+                    try {
+                        return ((double)(this[this.tableGstTranscatjoin.TSGSTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TSGST\' in table \'GstTranscatjoin\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGstTranscatjoin.TSGSTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsGoodsDetailNull() {
                 return this.IsNull(this.tableGstTranscatjoin.GoodsDetailColumn);
             }
@@ -4615,6 +4675,30 @@ namespace GSTINVOICE {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSGSTNull() {
                 this[this.tableGstTranscatjoin.SGSTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTCGSTNull() {
+                return this.IsNull(this.tableGstTranscatjoin.TCGSTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTCGSTNull() {
+                this[this.tableGstTranscatjoin.TCGSTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTSGSTNull() {
+                return this.IsNull(this.tableGstTranscatjoin.TSGSTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTSGSTNull() {
+                this[this.tableGstTranscatjoin.TSGSTColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7946,6 +8030,8 @@ namespace GSTINVOICE.CommonDsTableAdapters {
             tableMapping.ColumnMappings.Add("GST", "GST");
             tableMapping.ColumnMappings.Add("CGST", "CGST");
             tableMapping.ColumnMappings.Add("SGST", "SGST");
+            tableMapping.ColumnMappings.Add("TCGST", "TCGST");
+            tableMapping.ColumnMappings.Add("TSGST", "TSGST");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7962,7 +8048,8 @@ namespace GSTINVOICE.CommonDsTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST
+            this._commandCollection[0].CommandText = @"SELECT        GstTransactions.GoodsDetail, HSNCodetbl.HSN_SAC, GstTransactions.Qty, GstTransactions.TotalSale, GstTransactions.TaxableValue, GstTransactions.discount, HSNCodetbl.GST, HSNCodetbl.CGST, HSNCodetbl.SGST, 
+                         GstTransactions.TCGST, GstTransactions.TSGST
 FROM            (GstTransactions INNER JOIN
                          HSNCodetbl ON GstTransactions.CategoryId = HSNCodetbl.ID)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
