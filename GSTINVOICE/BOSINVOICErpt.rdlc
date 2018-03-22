@@ -86,8 +86,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>0.79514in</Top>
-        <Height>0.25in</Height>
+        <Top>0.93056in</Top>
+        <Left>0.01958in</Left>
+        <Height>0.36458in</Height>
         <Width>7.22425in</Width>
         <ZIndex>3</ZIndex>
         <Style>
@@ -345,8 +346,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_Customer</DataSetName>
-        <Top>1.17708in</Top>
-        <Left>0.01958in</Left>
+        <Top>1.55208in</Top>
         <Height>0.75in</Height>
         <Width>4.18829in</Width>
         <ZIndex>4</ZIndex>
@@ -593,7 +593,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_gsinvoice</DataSetName>
-        <Top>1.17708in</Top>
+        <Top>1.55208in</Top>
         <Left>4.62251in</Left>
         <Height>0.75in</Height>
         <Width>2.60174in</Width>
@@ -1746,7 +1746,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_GstTrans</DataSetName>
-        <Top>2.53819in</Top>
+        <Top>2.59027in</Top>
         <Left>0.01958in</Left>
         <Height>1.14584in</Height>
         <Width>7.20466in</Width>
@@ -2225,7 +2225,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!GrandTotal.Value)</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2281,7 +2283,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_gsinvoice</DataSetName>
-        <Top>3.78819in</Top>
+        <Top>4.06944in</Top>
         <Left>4.18673in</Left>
         <Height>1.75in</Height>
         <Width>2.87085in</Width>
@@ -2294,8 +2296,8 @@
       </Tablix>
       <Rectangle Name="Rectangle2">
         <KeepTogether>true</KeepTogether>
-        <Top>6.26389in</Top>
-        <Left>0.5925in</Left>
+        <Top>6.65972in</Top>
+        <Left>0.57099in</Left>
         <Height>0.69792in</Height>
         <Width>2.08599in</Width>
         <ZIndex>8</ZIndex>
@@ -2307,8 +2309,8 @@
       </Rectangle>
       <Rectangle Name="Rectangle5">
         <KeepTogether>true</KeepTogether>
-        <Top>6.26389in</Top>
-        <Left>4.76852in</Left>
+        <Top>6.65972in</Top>
+        <Left>4.74701in</Left>
         <Height>0.69792in</Height>
         <Width>2in</Width>
         <ZIndex>9</ZIndex>
@@ -2335,8 +2337,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox70</rd:DefaultName>
-        <Top>7.00347in</Top>
-        <Left>5.07947in</Left>
+        <Top>7.3993in</Top>
+        <Left>5.05796in</Left>
         <Height>0.25in</Height>
         <Width>1.45834in</Width>
         <ZIndex>10</ZIndex>
@@ -2351,7 +2353,7 @@
         </Style>
       </Textbox>
       <Line Name="Line3">
-        <Top>7.29514in</Top>
+        <Top>7.92014in</Top>
         <Left>0.01958in</Left>
         <Height>0in</Height>
         <Width>7.20467in</Width>
@@ -2382,7 +2384,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox35</rd:DefaultName>
-        <Top>5.86111in</Top>
+        <Top>6.09028in</Top>
         <Left>0.01958in</Left>
         <Height>0.25in</Height>
         <Width>1.80831in</Width>
@@ -2415,8 +2417,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox70</rd:DefaultName>
-        <Top>7.00347in</Top>
-        <Left>0.87453in</Left>
+        <Top>7.3993in</Top>
+        <Left>0.85302in</Left>
         <Height>0.25in</Height>
         <Width>1.45834in</Width>
         <ZIndex>13</ZIndex>
@@ -2443,7 +2445,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value> only</Value>
+                <Value xml:space="preserve"> </Value>
                 <Style>
                   <FontWeight>SemiBold</FontWeight>
                 </Style>
@@ -2453,10 +2455,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox35</rd:DefaultName>
-        <Top>5.86111in</Top>
-        <Left>1.85567in</Left>
+        <Top>6.09028in</Top>
+        <Left>1.82789in</Left>
         <Height>0.25in</Height>
-        <Width>5.20191in</Width>
+        <Width>5.22969in</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>

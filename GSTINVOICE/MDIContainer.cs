@@ -35,7 +35,7 @@ namespace GSTINVOICE
         private void addContracterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            new FrmCreateGSTINVOICE(true) { MdiParent = this }.Show();
+            new FrmCreateGSTINVOICE(true,false) { MdiParent = this }.Show();
         }
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,19 +103,19 @@ namespace GSTINVOICE
         private void billInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            new FrmCreateGSTINVOICE(false) { MdiParent = this }.Show();
+            new FrmCreateGSTINVOICE(false,false) { MdiParent = this }.Show();
         }
 
         private void viewGSTInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            new ViewInvoiceDetail(true) { MdiParent = this }.Show();
+            new FrmCreateGSTINVOICE(true,true) { MdiParent = this }.Show();
         }
 
         private void viewBillOfSupplyInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllMDIForms();
-            new ViewInvoiceDetail(false) { MdiParent = this }.Show();
+            new FrmCreateGSTINVOICE(false,true) { MdiParent = this }.Show();
         }
     }
 

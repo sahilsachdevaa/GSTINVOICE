@@ -37,6 +37,19 @@
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.goodDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hsccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalsale = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Taxableval = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cgst = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdSgstAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RowId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txttotalinvoice = new System.Windows.Forms.TextBox();
@@ -52,25 +65,10 @@
             this.txtgrandtotal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-            this.goodDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hsccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalsale = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Taxableval = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cgst = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sgstamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdSgstAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-=======
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
->>>>>>> 2a67dd35adee4ee7afe525e9b568d58339b4de62
+            this.button4 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +98,7 @@
             this.txtInvoice.ReadOnly = true;
             this.txtInvoice.Size = new System.Drawing.Size(147, 20);
             this.txtInvoice.TabIndex = 0;
+            this.txtInvoice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInvoice_KeyDown);
             // 
             // txtinvoicedate
             // 
@@ -151,14 +150,95 @@
             this.cgstamount,
             this.Sgstamount,
             this.grdSgstAmount,
-            this.catid});
+            this.catid,
+            this.RowId});
             this.dataGridView1.Location = new System.Drawing.Point(12, 132);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1244, 214);
+            this.dataGridView1.Size = new System.Drawing.Size(1155, 214);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
+            // 
+            // goodDesc
+            // 
+            this.goodDesc.HeaderText = "Description of Goods";
+            this.goodDesc.Name = "goodDesc";
+            this.goodDesc.Width = 250;
+            // 
+            // Hsccode
+            // 
+            this.Hsccode.HeaderText = "HSE/SAC Code";
+            this.Hsccode.Name = "Hsccode";
+            this.Hsccode.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Qty.";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 50;
+            // 
+            // Rate
+            // 
+            this.Rate.HeaderText = "Rate";
+            this.Rate.Name = "Rate";
+            // 
+            // totalsale
+            // 
+            this.totalsale.HeaderText = "Total Sale";
+            this.totalsale.Name = "totalsale";
+            this.totalsale.ReadOnly = true;
+            // 
+            // Discount
+            // 
+            this.Discount.HeaderText = "Discount%";
+            this.Discount.Name = "Discount";
+            // 
+            // Taxableval
+            // 
+            this.Taxableval.HeaderText = "Taxable Value";
+            this.Taxableval.Name = "Taxableval";
+            this.Taxableval.ReadOnly = true;
+            // 
+            // cgst
+            // 
+            this.cgst.HeaderText = "CGST Rate %";
+            this.cgst.Name = "cgst";
+            this.cgst.ReadOnly = true;
+            this.cgst.Width = 50;
+            // 
+            // cgstamount
+            // 
+            this.cgstamount.HeaderText = "Amount";
+            this.cgstamount.Name = "cgstamount";
+            this.cgstamount.ReadOnly = true;
+            // 
+            // Sgstamount
+            // 
+            this.Sgstamount.HeaderText = "SGST Rate %";
+            this.Sgstamount.Name = "Sgstamount";
+            this.Sgstamount.ReadOnly = true;
+            this.Sgstamount.Width = 50;
+            // 
+            // grdSgstAmount
+            // 
+            this.grdSgstAmount.HeaderText = "Amount";
+            this.grdSgstAmount.Name = "grdSgstAmount";
+            this.grdSgstAmount.ReadOnly = true;
+            // 
+            // catid
+            // 
+            this.catid.HeaderText = "Column1";
+            this.catid.Name = "catid";
+            this.catid.ReadOnly = true;
+            this.catid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.catid.Width = 5;
+            // 
+            // RowId
+            // 
+            this.RowId.HeaderText = "RowID";
+            this.RowId.Name = "RowId";
+            this.RowId.Width = 5;
             // 
             // label9
             // 
@@ -298,99 +378,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(999, 86);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
-            this.dateTimePicker1.TabIndex = 38;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(189, 480);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 52);
-            this.button1.TabIndex = 153;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-<<<<<<< HEAD
-            // goodDesc
-            // 
-            this.goodDesc.HeaderText = "Description of Goods";
-            this.goodDesc.Name = "goodDesc";
-            this.goodDesc.Width = 250;
-            // 
-            // Hsccode
-            // 
-            this.Hsccode.HeaderText = "HSE/SAC Code";
-            this.Hsccode.Name = "Hsccode";
-            this.Hsccode.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Qty.";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 50;
-            // 
-            // Rate
-            // 
-            this.Rate.HeaderText = "Rate";
-            this.Rate.Name = "Rate";
-            // 
-            // totalsale
-            // 
-            this.totalsale.HeaderText = "Total Sale";
-            this.totalsale.Name = "totalsale";
-            this.totalsale.ReadOnly = true;
-            // 
-            // Discount
-            // 
-            this.Discount.HeaderText = "Discount Percentage";
-            this.Discount.Name = "Discount";
-            // 
-            // Taxableval
-            // 
-            this.Taxableval.HeaderText = "Taxable Value";
-            this.Taxableval.Name = "Taxableval";
-            this.Taxableval.ReadOnly = true;
-            // 
-            // cgst
-            // 
-            this.cgst.HeaderText = "CGST Rate %";
-            this.cgst.Name = "cgst";
-            this.cgst.ReadOnly = true;
-            this.cgst.Width = 50;
-            // 
-            // cgstamount
-            // 
-            this.cgstamount.HeaderText = "Amount";
-            this.cgstamount.Name = "cgstamount";
-            this.cgstamount.ReadOnly = true;
-            // 
-            // Sgstamount
-            // 
-            this.Sgstamount.HeaderText = "SGST Rate %";
-            this.Sgstamount.Name = "Sgstamount";
-            this.Sgstamount.ReadOnly = true;
-            this.Sgstamount.Width = 50;
-            // 
-            // grdSgstAmount
-            // 
-            this.grdSgstAmount.HeaderText = "Amount";
-            this.grdSgstAmount.Name = "grdSgstAmount";
-            this.grdSgstAmount.ReadOnly = true;
-            // 
-            // catid
-            // 
-            this.catid.HeaderText = "Column1";
-            this.catid.Name = "catid";
-            this.catid.ReadOnly = true;
-            this.catid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.catid.Width = 5;
-=======
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(467, 480);
@@ -411,17 +398,34 @@
             this.button3.Text = "Close";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
->>>>>>> 2a67dd35adee4ee7afe525e9b568d58339b4de62
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(191, 480);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(122, 52);
+            this.button4.TabIndex = 156;
+            this.button4.Text = "Clear";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(1020, 85);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(236, 20);
+            this.dateTimePicker2.TabIndex = 157;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // FrmCreateGSTINVOICE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 570);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtgrandtotal);
             this.Controls.Add(this.label12);
@@ -484,6 +488,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hsccode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
@@ -496,12 +503,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sgstamount;
         private System.Windows.Forms.DataGridViewTextBoxColumn grdSgstAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn catid;
-<<<<<<< HEAD
-=======
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
->>>>>>> 2a67dd35adee4ee7afe525e9b568d58339b4de62
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowId;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

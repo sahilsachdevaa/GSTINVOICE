@@ -118,7 +118,7 @@ namespace GSTINVOICE
 
         private void textBox3_KeyDown(object sender, KeyEventArgs e)
         {
-            textBox3.Text = textBox3.Text.ToString().ToUpper();
+           // textBox3.Text = textBox3.Text.ToString().ToUpper();
         }
     }
 }

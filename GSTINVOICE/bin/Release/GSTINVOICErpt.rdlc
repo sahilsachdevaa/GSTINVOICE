@@ -4,6 +4,7 @@
     <ReportItems>
       <Line Name="Line1">
         <Top>0.66319in</Top>
+        <Left>0.01389in</Left>
         <Height>0in</Height>
         <Width>7.22425in</Width>
         <Style>
@@ -15,6 +16,7 @@
       </Line>
       <Line Name="Line2">
         <Top>0.11111in</Top>
+        <Left>0.01389in</Left>
         <Height>0in</Height>
         <Width>7.22425in</Width>
         <ZIndex>1</ZIndex>
@@ -46,7 +48,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>0.23958in</Top>
-        <Left>0.01958in</Left>
+        <Left>0.03347in</Left>
         <Height>0.39583in</Height>
         <Width>2.57292in</Width>
         <ZIndex>2</ZIndex>
@@ -86,8 +88,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>0.79514in</Top>
-        <Height>0.25in</Height>
+        <Top>0.95139in</Top>
+        <Left>0.01389in</Left>
+        <Height>0.33333in</Height>
         <Width>7.22425in</Width>
         <ZIndex>3</ZIndex>
         <Style>
@@ -345,8 +348,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_Customer</DataSetName>
-        <Top>1.17708in</Top>
-        <Left>0.01958in</Left>
+        <Top>1.57291in</Top>
+        <Left>0.01389in</Left>
         <Height>0.75in</Height>
         <Width>4.18829in</Width>
         <ZIndex>4</ZIndex>
@@ -593,8 +596,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_gsinvoice</DataSetName>
-        <Top>1.17708in</Top>
-        <Left>4.62251in</Left>
+        <Top>1.57291in</Top>
+        <Left>4.6364in</Left>
         <Height>0.75in</Height>
         <Width>2.60174in</Width>
         <ZIndex>5</ZIndex>
@@ -1746,7 +1749,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_GstTrans</DataSetName>
-        <Top>2.53819in</Top>
+        <Top>2.70486in</Top>
         <Left>0.01958in</Left>
         <Height>1.14584in</Height>
         <Width>7.20466in</Width>
@@ -2225,7 +2228,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!GrandTotal.Value)</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2281,8 +2286,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rpt_gsinvoice</DataSetName>
-        <Top>3.78819in</Top>
-        <Left>4.18673in</Left>
+        <Top>4.10069in</Top>
+        <Left>4.20062in</Left>
         <Height>1.75in</Height>
         <Width>2.87085in</Width>
         <ZIndex>7</ZIndex>
@@ -2294,8 +2299,8 @@
       </Tablix>
       <Rectangle Name="Rectangle2">
         <KeepTogether>true</KeepTogether>
-        <Top>6.23611in</Top>
-        <Left>0.5925in</Left>
+        <Top>6.65278in</Top>
+        <Left>0.60639in</Left>
         <Height>0.69792in</Height>
         <Width>2in</Width>
         <ZIndex>8</ZIndex>
@@ -2307,8 +2312,8 @@
       </Rectangle>
       <Rectangle Name="Rectangle5">
         <KeepTogether>true</KeepTogether>
-        <Top>6.23611in</Top>
-        <Left>4.76852in</Left>
+        <Top>6.65278in</Top>
+        <Left>4.78241in</Left>
         <Height>0.69792in</Height>
         <Width>2in</Width>
         <ZIndex>9</ZIndex>
@@ -2335,8 +2340,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox70</rd:DefaultName>
-        <Top>7.00347in</Top>
-        <Left>0.79042in</Left>
+        <Top>7.42014in</Top>
+        <Left>0.80431in</Left>
         <Height>0.25in</Height>
         <Width>1.45834in</Width>
         <ZIndex>10</ZIndex>
@@ -2367,8 +2372,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox70</rd:DefaultName>
-        <Top>7.00347in</Top>
-        <Left>5.07947in</Left>
+        <Top>7.42014in</Top>
+        <Left>5.09336in</Left>
         <Height>0.25in</Height>
         <Width>1.45834in</Width>
         <ZIndex>11</ZIndex>
@@ -2383,8 +2388,8 @@
         </Style>
       </Textbox>
       <Line Name="Line3">
-        <Top>7.29514in</Top>
-        <Left>0.01958in</Left>
+        <Top>7.92014in</Top>
+        <Left>0.03347in</Left>
         <Height>0in</Height>
         <Width>7.20467in</Width>
         <ZIndex>12</ZIndex>
@@ -2404,14 +2409,17 @@
             <TextRuns>
               <TextRun>
                 <Value>Amount in words</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>White</Color>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox31</rd:DefaultName>
-        <Top>5.7257in</Top>
+        <Top>6.06945in</Top>
         <Height>0.25in</Height>
         <Width>1.82789in</Width>
         <ZIndex>13</ZIndex>
@@ -2419,6 +2427,7 @@
           <Border>
             <Style>None</Style>
           </Border>
+          <BackgroundColor>Blue</BackgroundColor>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -2433,18 +2442,22 @@
             <TextRuns>
               <TextRun>
                 <Value>=Code.RupeesToWord(Sum(Fields!GrandTotal.Value, "rpt_gsinvoice"))</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
               <TextRun>
-                <Value> only</Value>
-                <Style />
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox31</rd:DefaultName>
-        <Top>5.7257in</Top>
+        <Top>6.06945in</Top>
         <Left>1.84178in</Left>
         <Height>0.25in</Height>
         <Width>5.38246in</Width>
@@ -2453,6 +2466,7 @@
           <Border>
             <Style>None</Style>
           </Border>
+          <BackgroundColor>LightBlue</BackgroundColor>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -2467,7 +2481,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>7.26591in</Width>
+  <Width>7.2798in</Width>
   <Page>
     <PageHeader>
       <Height>1.50222in</Height>
@@ -2495,7 +2509,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
           <Top>0.14458in</Top>
-          <Left>0.01958in</Left>
+          <Left>0.03347in</Left>
           <Height>0.5in</Height>
           <Width>7.20466in</Width>
           <Style>
@@ -2529,7 +2543,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
           <Top>0.71403in</Top>
-          <Left>0.01958in</Left>
+          <Left>0.03347in</Left>
           <Height>0.25in</Height>
           <Width>7.20466in</Width>
           <ZIndex>1</ZIndex>
@@ -2569,7 +2583,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
           <Top>1.12721in</Top>
-          <Left>2.22791in</Left>
+          <Left>2.2418in</Left>
           <Height>0.31945in</Height>
           <Width>2.71875in</Width>
           <ZIndex>2</ZIndex>
