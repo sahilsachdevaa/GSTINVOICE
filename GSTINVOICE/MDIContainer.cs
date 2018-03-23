@@ -13,6 +13,7 @@ namespace GSTINVOICE
 {
     public partial class MDIContainer : Form
     {
+        private bool isLogined;
         public LoginForm frmLogin { get; set; }
         public AddContracter FrmContracter { get; set; }
         public MDIContainer()
@@ -28,8 +29,11 @@ namespace GSTINVOICE
         
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideAllMDIForms();
-            new AddCustomerFrm() { MdiParent = this }.Show();
+            //HideAllMDIForms();
+            if (isLogined)
+            {
+                new AddCustomerFrm() { MdiParent = this }.Show(); 
+            }
         }
 
         private void addContracterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,8 +58,11 @@ namespace GSTINVOICE
 
         private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HideAllMDIForms();
-            new AddCategory() { MdiParent = this}.Show();
+            if (isLogined)
+            {
+                //HideAllMDIForms();
+                new AddCategory() { MdiParent = this }.Show();
+            }
         }
         public void CheckContractor()
         {
@@ -87,6 +94,7 @@ namespace GSTINVOICE
         public void EnableControls()
         {
             this.menuStrip1.Visible = true;
+            this.isLogined = true;
             string dateString = "4/15/2018 7:10:24 AM";
             DateTime dateFromString =
                 DateTime.Parse(dateString, System.Globalization.CultureInfo.InvariantCulture);

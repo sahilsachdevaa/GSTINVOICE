@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCustomerMobile = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtCustomerGSTIN = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,10 +64,23 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(12, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1073, 532);
+            this.groupBox1.Size = new System.Drawing.Size(1257, 532);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Customer Detail";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.button1.Location = new System.Drawing.Point(743, 407);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 44);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtEmail
             // 
@@ -202,25 +215,12 @@
             this.txtCustomerGSTIN.Size = new System.Drawing.Size(263, 27);
             this.txtCustomerGSTIN.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button1.Location = new System.Drawing.Point(743, 407);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 44);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // AddCustomerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1101, 643);
+            this.ClientSize = new System.Drawing.Size(1293, 643);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCustomerFrm";

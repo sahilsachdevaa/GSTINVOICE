@@ -406,9 +406,9 @@ namespace GSTINVOICE
             OleDbConnection conn = new OleDbConnection(HelperClass.ConString);
             string sql = null;
             DateTime date = Convert.ToDateTime(txtinvoicedate.Text);
-            var obj = txtCustomer.Text.Split();
+            var obj = txtCustomer.Text.Split(':');
 
-            OleDbDataAdapter da = new OleDbDataAdapter("Select ID from Customertbl where CustomerGSTIN ='" + obj[2] + "'", conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select ID from Customertbl where CustomerGSTIN ='" + obj[1].Trim() + "'", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             int getid = Convert.ToInt16(dt.Rows[0][0]);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtCGST = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtItems = new System.Windows.Forms.TextBox();
             this.txtGST = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,11 +68,24 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(21, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1115, 545);
+            this.groupBox1.Size = new System.Drawing.Size(1240, 560);
             this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Category Detail";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.button1.Location = new System.Drawing.Point(718, 463);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 44);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -226,25 +239,12 @@
             this.txtGST.Size = new System.Drawing.Size(263, 27);
             this.txtGST.TabIndex = 4;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button1.Location = new System.Drawing.Point(718, 463);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 44);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // AddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1159, 623);
+            this.ClientSize = new System.Drawing.Size(1288, 623);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCategory";
